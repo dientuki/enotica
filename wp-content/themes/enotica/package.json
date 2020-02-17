@@ -1,8 +1,5 @@
 {
-  "name": "enotica",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=webpack/webpack.config.js",
@@ -12,8 +9,6 @@
     "svg": "svgo --config=svgo.yml -f ./assets/images -o ./dist/svg",
     "stylelint": "stylelint './assets/sass/**/*.scss' --syntax scss --config stylelint.json"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.7.4",
     "babel-eslint": "^10.0.3",

@@ -1,0 +1,202 @@
+.hidden,
+.element-invisible {
+  display: none;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: em(1);
+  margin: em(-1);
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: em(1);
+
+  &.focusable {
+    &:active,
+    &:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto;
+    }
+  }
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+[class *= aspect-] {
+  margin: 0;
+  width: 100%;
+  height: 0;
+  position: relative;
+  display: block;
+  background: map-get($colors, "white");
+  overflow: hidden;
+  z-index: 0;
+
+  img,
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.aspect-1-1 {
+  padding-bottom: 100%;
+}
+
+.aspect-16-9 {
+  padding-bottom: (9%/16*100);
+}
+
+.aspect-service-preview {
+  padding-bottom: (140%/200*100);
+}
+
+.aspect-column {
+  padding-bottom: (310%/610*100);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: map-get($font-weight, "bold");
+}
+
+.blured {
+  background-image: none;
+
+  .lzl {
+    filter: blur(10px);
+    transform: scale(1.02);
+  }
+
+  .loaded,
+  .error {
+    background: none !important;
+    filter: blur(0);
+    transition: filter 1s cubic-bezier(.08, .74, .39, .97), transform 1s cubic-bezier(.08, .74, .39, .97);
+    will-change: filter, transform;
+    transform: scale(1);
+  }
+}
+
+.more-info,
+.more-info-email {
+  border: solid rem(1);
+  min-height: rem(30);
+  height: auto;
+  line-height: rem(30);
+  padding: 0 rem(22);
+  border-radius: rem(9);
+  display: inline-block;
+}
+
+.more-info {
+  font-weight: map-get($font-weight, "bold");
+
+  &:before {
+    content: "+ ";
+  }
+
+  &-white {
+    border-color: map-get($colors, "blue");
+    color: map-get($colors, "blue");
+
+    &:before {
+      color: map-get($colors, "green");
+    }
+  }
+
+  &-blue {
+    border-color: map-get($colors, "white");
+    color: map-get($colors, "white");
+
+    &:before {
+      color: map-get($colors, "green");
+    }
+  }
+
+  &-green {
+    border-color: map-get($colors, "white");
+    color: map-get($colors, "white");
+
+    &:before {
+      color: map-get($colors, "blue");
+    }
+  }
+}
+
+.more-info-email {
+  font-family: myriadpro-light;
+  color: map-get($colors, "black");
+  margin-top: rem(30);
+  padding-left: rem(60);
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: rem(20);
+    top: 50%;
+    transform: translateY(-50%);
+    width: rem(22);
+    height: rem(15);
+    background: map-get($colors, "green");
+  }
+}
+
+.background {
+  &-green {
+    background: map-get($colors, "green");
+  }
+
+  &-black {
+    background: map-get($colors, "black");
+  }
+}
+
+.float {
+  &-left {
+    float: left;
+  }
+
+  &-right {
+    float: right;
+  }
+}
+
+@media (max-width: em(470)) {
+  .more-info-email {
+    padding: 0 rem(11);
+
+    &:before {
+      display: inline-block;
+      position: static;
+      transform: none;
+      margin-right: 1rem;
+    }
+  }
+}

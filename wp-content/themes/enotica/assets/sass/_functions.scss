@@ -1,0 +1,9 @@
+@function rem($pixels) {
+
+  @return #{$pixels / 16}rem;
+}
+
+@function em($pixels, $fs: 16) {
+
+  @return #{$pixels / $fs}em;
+}

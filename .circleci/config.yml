@@ -1,0 +1,299 @@
+wd: &wd
+  working_directory: ~/enotica
+
+themeMk1: &themeMk1
+  working_directory: ~/enotica/wp-content/themes/enotica-mk1
+
+php: &php
+  docker:
+    - image: circleci/php:7.2.19-cli
+
+node: &node
+  docker:
+    - image: circleci/node:10.16.0
+
+ubuntu: &ubuntu
+  docker:
+    - image: circleci/buildpack-deps:18.04
+
+version: 2
+jobs:
+  checkout_code:
+    <<: *ubuntu
+    <<: *wd
+    steps:
+      - checkout
+      - save_cache:
+          key: checkout-cache-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
+          paths:
+            - ~/enotica
+
+  php_checks:
+    <<: *wd
+    <<: *php
+    steps:
+      - restore_cache:
+          key: checkout-cache-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
+      - run:
+          name: Check terminate scripts commands, and logs commands
+          command: sh scripts/check_output.sh
+      - run:
+          name: Check git merged files
+          command: sh scripts/check_merge.sh
+      - run:
+          name: Check PHP Sintax()
+          command: sh scripts/check_syntax.sh
+
+  install_webpack:
+      <<: *node
+      <<: *themeMk1
+      steps:
+        - restore_cache:
+            key: checkout-cache-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
+        - run:
+            name: Node as tooling install
+            command: npm install
+        - save_cache:
+            key: dependency-cache-node-{{ checksum "package.json" }}
+            paths:
+              - node_modules
+
+  frontend_tests:
+    <<: *node
+    <<: *themeMk1
+    steps:
+      - restore_cache:
+          key: checkout-cache-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
+      - restore_cache:
+          key: dependency-cache-node-{{ checksum "package.json" }}
+      - run:
+          name: Linter Javascript
+          command: npm run eslint
+      - run:
+          name: Linter CSS
+          command: npm run stylelint
+
+  build_webpack:
+    <<: *node
+    <<: *themeMk1
+    steps:
+      - restore_cache:
+          key: checkout-cache-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
+      - restore_cache:
+          key: dependency-cache-node-{{ checksum "package.json" }}
+      - run:
+          name: Building public assets
+          command: npm run prod
+      - save_cache:
+          key: public-assets-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
+          paths:
+            - dist
+
+  build_targz:
+    <<: *wd
+    <<: *ubuntu
+    steps:
+      - restore_cache:
+          key: checkout-cache-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
+      - restore_cache:
+          key: public-assets-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
+      - run:
+          name: Add new version.txt
+          command: echo commit-$(git rev-parse --short HEAD) >  ./_version.txt
+      - run:
+          name: Remove files
+          command: |
+            rm -rf .circleci
+            rm -rf scripts
+            cd wp-content/themes/enotica-mk1
+            rm -rf .babelrc
+            rm -rf .eslintrc.json
+            rm -rf webpack
+            rm -rf package.json
+            rm -rf package-lock.json
+            rm -rf postcss.config.js
+            rm -rf stylelint.json
+      - run:
+          name: Making build.tar.gz
+          command: |
+            tar -zcvf ../build.tar.gz --exclude-vcs ./
+            mv ../build.tar.gz ./build.tar.gz
+      - store_artifacts:
+          path: build.tar.gz
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - build.tar.gz
+
+  deploy_stage:
+    <<: *wd
+    <<: *ubuntu
+    steps:
+      - attach_workspace:
+          at: ./
+      - add_ssh_keys:
+          fingerprints:
+            - 35:e3:9f:81:c3:8b:a9:61:c3:77:e2:98:e9:17:61:79
+      - run:
+          name: Add testing server to know host file
+          command: |
+            echo $KNOW_HOST_1 >> ~/.ssh/known_hosts
+            echo $KNOW_HOST_2 >> ~/.ssh/known_hosts
+      - run:
+          name: Uploading build.tar.gz
+          command: scp build.tar.gz mateclass@mateclass.com:enotica
+      - run:
+          name: Untar
+          command: ssh mateclass@mateclass.com tar -xzf enotica/build.tar.gz -C enotica
+      - run:
+          name: Clean build.tar.gz
+          command: ssh mateclass@mateclass.com rm -rf enotica/build.tar.gz
+
+  release:
+    <<: *wd
+    <<: *ubuntu
+    steps:
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Publish assets to Github
+          command: |
+            wget https://github.com/tcnksm/ghr/releases/download/v0.13.0/ghr_v0.13.0_linux_amd64.tar.gz
+            tar -xvzf ghr_v0.13.0_linux_amd64.tar.gz ghr_v0.13.0_linux_amd64/ghr
+            mv ghr_v0.13.0_linux_amd64/ghr ghr
+            ./ghr -t $GITHUB_TOKEN -u $CIRCLE_PROJECT_USERNAME -r $CIRCLE_PROJECT_REPONAME $CIRCLE_TAG build.tar.gz
+
+workflows:
+  version: 2
+  commit:
+    jobs:
+      - checkout_code:
+          filters:
+            branches:
+              ignore: master
+      - php_checks:
+          requires:
+            - checkout_code
+          filters:
+            branches:
+              ignore: master
+      - install_webpack:
+          requires:
+            - checkout_code
+          filters:
+            branches:
+              ignore: master
+      - frontend_tests:
+          requires:
+            - install_webpack
+          filters:
+            branches:
+              ignore: master
+      - build_webpack:
+          requires:
+            - install_webpack
+          filters:
+            branches:
+              ignore: master
+  merge_master:
+    jobs:
+      - checkout_code:
+          filters:
+            branches:
+              only: master
+      - php_checks:
+          requires:
+            - checkout_code
+          filters:
+            branches:
+              only: master
+      - install_webpack:
+          requires:
+            - checkout_code
+          filters:
+            branches:
+              only: master
+      - frontend_tests:
+          requires:
+            - install_webpack
+          filters:
+            branches:
+              only: master
+      - build_webpack:
+          requires:
+            - install_webpack
+          filters:
+            branches:
+              only: master
+      - build_targz:
+          requires:
+            - php_checks
+            - frontend_tests
+            - build_webpack
+          filters:
+            branches:
+              only: master
+      - deploy_stage:
+          requires:
+            - build_targz
+          filters:
+            branches:
+              only: master
+  release:
+    jobs:
+      - checkout_code:
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/
+      - php_checks:
+          requires:
+            - checkout_code
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/
+      - install_webpack:
+          requires:
+            - checkout_code
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/
+      - frontend_tests:
+          requires:
+            - install_webpack
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/
+      - build_webpack:
+          requires:
+            - install_webpack
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/
+      - build_targz:
+          requires:
+            - php_checks
+            - frontend_tests
+            - build_webpack
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/
+      - release:
+          requires:
+            - build_targz
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/

@@ -95,3 +95,4 @@ add_action( 'widgets_init', 'enotica_mk1_widget_area_registration' );
 
 //lets load the custom widget
 require_once (ENOTICAMK1_THEME_FOLDER_PATH . 'widgets/class.contact-widget.php');
+require_once (ENOTICAMK1_THEME_FOLDER_PATH . 'widgets/class.tactic-widget.php');

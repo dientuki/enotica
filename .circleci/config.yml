@@ -133,7 +133,7 @@ jobs:
           at: ./
       - add_ssh_keys:
           fingerprints:
-            - 35:e3:9f:81:c3:8b:a9:61:c3:77:e2:98:e9:17:61:79
+            - 4a:8c:9e:1a:bb:8b:09:f8:51:da:6a:1b:cd:ee:d3:4f
       - run:
           name: Add testing server to know host file
           command: |

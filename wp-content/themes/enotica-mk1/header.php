@@ -24,6 +24,4 @@
       
       </div>
 
-      <?php dynamic_sidebar("header"); ?>
-
     </header>

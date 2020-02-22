@@ -77,12 +77,12 @@ function enotica_mk1_widget_area_registration() {
     )
   );
 
-  // Header
+  // Front page
 	register_sidebar(
     array(
-      'name'        => "Header",
-      'id'          => 'header',
-      'description' => "Widgets del header",
+      'name'        => "Front Page",
+      'id'          => 'front-page',
+      'description' => "Widgets de la home",
       'before_title'  => '',
       'after_title'   => '',
       'before_widget' => '',

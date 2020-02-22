@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.3.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-02-12 06:57:24+0000\n"
+"PO-Revision-Date: 2020-02-17 10:07:49+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12771,7 +12771,7 @@ msgstr "Claves de autentificación"
 
 #: wp-admin/includes/file.php:2138
 msgid "Hostname"
-msgstr "Servidor"
+msgstr "Hostname"
 
 #: wp-admin/includes/file.php:2104
 msgid "Connection Information"

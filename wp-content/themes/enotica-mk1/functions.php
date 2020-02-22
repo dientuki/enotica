@@ -67,8 +67,8 @@ function enotica_mk1_widget_area_registration() {
 	// Footer 
 	register_sidebar(
     array(
-      'name'        => "Footer Contact",
-      'id'          => 'footer-contact',
+      'name'        => "Footer",
+      'id'          => 'footer',
       'description' => "Widgets del footer",
       'before_title'  => '',
       'after_title'   => '',
@@ -76,6 +76,19 @@ function enotica_mk1_widget_area_registration() {
       'after_widget'  => '',      
     )
   );
+
+  // Header
+	register_sidebar(
+    array(
+      'name'        => "Header",
+      'id'          => 'header',
+      'description' => "Widgets del header",
+      'before_title'  => '',
+      'after_title'   => '',
+      'before_widget' => '',
+      'after_widget'  => '',      
+    )
+  );  
 }
 
 add_action( 'widgets_init', 'enotica_mk1_widget_area_registration' );

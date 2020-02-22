@@ -3,7 +3,7 @@
         <div class="footer__item">
         </div>
         <div class="footer__item">
-          <?php dynamic_sidebar("Footer Contact"); ?>
+          <?php dynamic_sidebar("footer"); ?>
         </div>
         <div class="footer__item">
           <div>Redes</div>

@@ -54,10 +54,31 @@ function load_svg($file) {
  */
 function enotica_mk1_init() {
 	$locations = array(
-		'primary'  => 'Header Menu'
+    'primary'  => 'Header Menu',
+    'social' => 'Social Networks'
   );
   
   register_nav_menus( $locations );
 }
 
 add_action( 'init', 'enotica_mk1_init' );
+
+function enotica_mk1_widget_area_registration() {
+	// Footer 
+	register_sidebar(
+    array(
+      'name'        => "Footer Contact",
+      'id'          => 'footer-contact',
+      'description' => "Widgets del footer",
+      'before_title'  => '',
+      'after_title'   => '',
+      'before_widget' => '',
+      'after_widget'  => '',      
+    )
+  );
+}
+
+add_action( 'widgets_init', 'enotica_mk1_widget_area_registration' );
+
+//lets load the custom widget
+require_once (ENOTICAMK1_THEME_FOLDER_PATH . 'widgets/class.contact-widget.php');

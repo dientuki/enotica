@@ -48,3 +48,16 @@ function load_svg($file) {
 
   return false;
 }
+
+/**
+ * Register navigation menus uses wp_nav_menu.
+ */
+function enotica_mk1_init() {
+	$locations = array(
+		'primary'  => 'Header Menu'
+  );
+  
+  register_nav_menus( $locations );
+}
+
+add_action( 'init', 'enotica_mk1_init' );

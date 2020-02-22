@@ -55,7 +55,8 @@ function load_svg($file) {
 function enotica_mk1_init() {
 	$locations = array(
     'primary'  => 'Header Menu',
-    'social' => 'Social Networks'
+    'social' => 'Social Networks',
+    'cart' => 'User Interaction'
   );
   
   register_nav_menus( $locations );

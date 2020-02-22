@@ -18,10 +18,21 @@
   <body <?php body_class(); ?>>
   
     <header class="header">
-      <div class="header__top"></div>
+      <div class="header__top">
+      
+          <?php wp_nav_menu( array(
+            'container_class' => 'menu-social__wrapper',
+            'menu_class' => 'menu-social',
+            'theme_location'=>'cart'
+          )); ?>
+      </div>
 
       <div class="header__nav">
-      
+          <?php wp_nav_menu( array(
+            'container_class' => 'menu-social__wrapper',
+            'menu_class' => 'menu-social',
+            'theme_location'=>'primary'
+          )); ?>      
       </div>
 
     </header>

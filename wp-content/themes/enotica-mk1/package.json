@@ -19,6 +19,7 @@
     "eslint": "^6.8.0",
     "file-loader": "^5.0.2",
     "hard-source-webpack-plugin": "^0.13.1",
+    "husky": "^4.2.3",
     "image-webpack-loader": "^6.0.0",
     "mini-css-extract-plugin": "^0.9.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
@@ -35,5 +36,10 @@
   },
   "dependencies": {
     "vanilla-lazyload": "^12.4.0"
+  },
+  "husky": {
+    "hooks": {
+      "post-commit": "npm run eslint && npm run stylelint"
+    }
   }
 }

@@ -531,7 +531,6 @@ function list_translation_updates() {
 		}
 		return;
   }
-  die(print_r($updates));
 
 	$form_action = 'update-core.php?action=do-translation-upgrade';
 	?>

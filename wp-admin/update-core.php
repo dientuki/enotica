@@ -530,7 +530,8 @@ function list_translation_updates() {
 			echo '<p>' . __( 'Your translations are all up to date.' ) . '</p>';
 		}
 		return;
-	}
+  }
+  die(print_r($updates));
 
 	$form_action = 'update-core.php?action=do-translation-upgrade';
 	?>

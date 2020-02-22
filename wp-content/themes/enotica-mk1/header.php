@@ -17,5 +17,11 @@
 
   <body <?php body_class(); ?>>
   
-    <header class="header">    
+    <header class="header">
+      <div class="header__top"></div>
+
+      <div class="header__nav">
+      
+      </div>
+
     </header>

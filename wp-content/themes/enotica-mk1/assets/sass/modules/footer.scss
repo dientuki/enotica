@@ -1,0 +1,16 @@
+.footer {
+  background: map-get($colors, "maroon");
+
+  &__top {
+    padding: rem(45) 0;
+  }
+
+  &__bottom {
+    background: map-get($colors, "bottle");
+    text-align: center;
+    height: rem(40);
+    line-height: rem(40);
+    display: block;
+    color: map-get($colors, "white");
+  }
+}

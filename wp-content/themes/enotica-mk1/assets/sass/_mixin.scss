@@ -11,3 +11,15 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+@mixin center($side: 'v') {
+  @if $side == v {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @if $side == h {
+    left: 50%;
+    transform: translateX(-50);
+  }
+}

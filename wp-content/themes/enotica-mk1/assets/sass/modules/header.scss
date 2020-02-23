@@ -7,6 +7,7 @@
     @include center('v');
     background: map-get($colors, "maroon");
   }
+
   &__top {
     height: rem(240);
   }

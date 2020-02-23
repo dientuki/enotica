@@ -1,0 +1,9 @@
+.menu {
+  &-user {
+    &__wrapper {
+      position: absolute;
+      right: 0;
+      @include center('v');
+    }
+  }
+}

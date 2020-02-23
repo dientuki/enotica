@@ -1,0 +1,13 @@
+.header {
+  &__logo {
+    width: rem(470);
+    height: rem(110);
+    position: absolute;
+    left: 0;
+    @include center('v');
+    background: map-get($colors, "maroon");
+  }
+  &__top {
+    height: rem(240);
+  }
+}

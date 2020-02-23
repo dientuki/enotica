@@ -4,8 +4,8 @@
     height: rem(110);
     position: absolute;
     left: 0;
-    @include center('v');
     background: map-get($colors, "maroon");
+    @include center("v");
   }
 
   &__top {

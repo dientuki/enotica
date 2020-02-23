@@ -12,7 +12,8 @@
   overflow: hidden;
 }
 
-@mixin center($side: 'v') {
+@mixin center($side: "v") {
+
   @if $side == v {
     top: 50%;
     transform: translateY(-50%);

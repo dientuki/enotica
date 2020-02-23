@@ -3,7 +3,7 @@
     &__wrapper {
       position: absolute;
       right: 0;
-      @include center('v');
+      @include center("v");
     }
   }
 }

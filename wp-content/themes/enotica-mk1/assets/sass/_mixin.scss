@@ -21,6 +21,11 @@
 
   @if $side == h {
     left: 50%;
-    transform: translateX(-50);
+    transform: translateX(-50%);
   }
+}
+
+@mixin box($size) {
+  width: rem($size);
+  height: rem($size);
 }

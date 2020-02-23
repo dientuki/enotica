@@ -97,3 +97,29 @@ add_action( 'widgets_init', 'enotica_mk1_widget_area_registration' );
 //lets load the custom widget
 require_once (ENOTICAMK1_THEME_FOLDER_PATH . 'widgets/class.contact-widget.php');
 require_once (ENOTICAMK1_THEME_FOLDER_PATH . 'widgets/class.tactic-widget.php');
+
+/**
+ * Filter the CSS class for a nav menu based on a condition.
+ *
+ * @param array  $classes The CSS classes that are applied to the menu item's <li> element.
+ * @param object $item    The current menu item.
+ * @return array (maybe) modified nav menu class.
+ */
+function enotica_mk1_nav_class( $classes, $item, $args ) {
+  if ($args->theme_location === 'social') {
+  //if (in_array($args->theme_location, array('social', 'cart'))) {
+    $classes[] = $item->title;
+  }
+
+  $classes[] = $args->menu_class . '__item';
+
+  return $classes;
+}
+add_filter( 'nav_menu_css_class' , 'enotica_mk1_nav_class' , 10, 3 );
+
+function enotica_mk1_menu_link_class( $atts, $item, $args ) {
+  $atts['class'] = $args->menu_class . '__link';
+
+  return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'enotica_mk1_menu_link_class', 1, 3 );

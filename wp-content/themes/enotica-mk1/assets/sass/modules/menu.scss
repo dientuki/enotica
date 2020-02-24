@@ -2,7 +2,7 @@
   &-user {
     &__wrapper {
       position: absolute;
-      right: 0;
+      right: rem(22);
       @include center("v");
     }
 
@@ -35,6 +35,31 @@
         top: 0;
         @include center("h");
       }
+    }
+  }
+
+  &-primary {
+    height: rem(65);
+    width: calc(100% - #{rem(44)});
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    > .menu-primary {
+      &__item {
+        height: 100%;
+
+        > .menu-primary__link {
+          display: block;
+          height: 100%;
+          line-height: rem(65);
+        }
+      }
+    }
+
+    &__link {
+      color: map-get($colors, "white");
+      text-transform: uppercase;
     }
   }
 }

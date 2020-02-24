@@ -3,12 +3,17 @@
     width: rem(470);
     height: rem(110);
     position: absolute;
-    left: 0;
+    left: rem(22);
     background: map-get($colors, "maroon");
     @include center("v");
   }
 
   &__top {
     height: rem(240);
+  }
+
+  &__nav {
+    height: rem(65);
+    background: map-get($colors, "maroon");
   }
 }

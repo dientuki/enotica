@@ -1,5 +1,5 @@
 <div class="widget-contact">
-  <div>Contacto</div>
+  <div class="widget-contact__title uppercase">Contacto</div>
   <ul>
     <?php $values = array('address', 'phone', 'email'); ?>
 

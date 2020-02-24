@@ -9,10 +9,11 @@
 
 @import "layout/layout.scss";
 
+@import "modules/header.scss";
+@import "modules/menu.scss";
 @import "modules/footer.scss";
 
 /*
-@import "modules/header.scss";
 @import "modules/header-animation.scss";
 @import "widgets/index.scss";
 @import "articles/index.scss";

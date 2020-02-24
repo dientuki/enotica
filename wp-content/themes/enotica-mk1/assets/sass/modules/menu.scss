@@ -1,0 +1,66 @@
+.menu {
+  &-user {
+    &__wrapper {
+      position: absolute;
+      right: rem(22);
+      @include center("v");
+    }
+
+    &__item {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      margin-left: rem(25);
+      float: left;
+      position: relative;
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+
+    &__link {
+      display: block;
+      text-transform: uppercase;
+      position: relative;
+      padding-top: rem(70);
+      color: map-get($colors, "maroon");
+
+      &:before {
+        @include box(45);
+        border-radius: 10rem;
+        background: map-get($colors, "maroon") center center no-repeat;
+        position: absolute;
+        content: "";
+        top: 0;
+        @include center("h");
+      }
+    }
+  }
+
+  &-primary {
+    height: rem(65);
+    width: calc(100% - #{rem(44)});
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    &__link {
+      color: map-get($colors, "white");
+      text-transform: uppercase;
+    }
+
+    > .menu-primary {
+      &__item {
+        height: 100%;
+
+        /* stylelint-disable max-nesting-depth */
+        > .menu-primary__link {
+          display: block;
+          height: 100%;
+          line-height: rem(65);
+        }
+      }
+    }
+  }
+}

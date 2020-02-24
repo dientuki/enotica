@@ -1,0 +1,19 @@
+.widget-hotsale {
+  &__header {
+    padding: rem(60) 0 rem(45) 0;
+    background: map-get($colors, "bottle");
+    text-align: center;
+  }
+
+  &__subtitle {
+    color: map-get($colors, "tacticBG");
+  }
+
+  &__hot {
+    color: map-get($colors, "maroon");
+  }
+
+  &__container {
+    padding: rem(60) 0;
+  }
+}

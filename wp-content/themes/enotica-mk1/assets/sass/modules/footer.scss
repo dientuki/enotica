@@ -30,4 +30,8 @@
     width: rem(230);
     background: no-repeat center center map-get($colors, "white");
   }
+
+  &__title {
+    @include shared("margin-bottom");
+  }
 }

@@ -29,3 +29,7 @@
   width: rem($size);
   height: rem($size);
 }
+
+@mixin shared($value) {
+  #{$value}: map-get($shared, $value);
+}

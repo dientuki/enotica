@@ -63,4 +63,20 @@
       }
     }
   }
+
+  &-social {
+    &__item {
+      @include shared("height");
+      @include shared("line-height");
+      @include shared("margin-top");
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &__link {
+      display: block;
+    }
+  }
 }

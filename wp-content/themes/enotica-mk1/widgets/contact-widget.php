@@ -4,7 +4,12 @@
     <?php $values = array('address', 'phone', 'email'); ?>
 
     <?php foreach ($values as $value): ?>
-      <li class="<?php echo $value; ?>"><?php echo $instance[$value]; ?></li>
+      <li class="widget-contact__item icon-<?php echo $value; ?>">
+        <?php if ($value == 'email'): ?>
+          <a href="mailto:<?php echo $instance[$value]; ?>"><?php echo $instance[$value]; ?></a>
+        <?php else: ?>
+          <?php echo $instance[$value]; ?></li>
+        <?php endif; ?>
     <?php endforeach ?>
     
   </ul>

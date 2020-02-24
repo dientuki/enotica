@@ -45,21 +45,22 @@
     justify-content: space-between;
     margin: 0 auto;
 
+    &__link {
+      color: map-get($colors, "white");
+      text-transform: uppercase;
+    }
+
     > .menu-primary {
       &__item {
         height: 100%;
 
+        /* stylelint-disable max-nesting-depth */
         > .menu-primary__link {
           display: block;
           height: 100%;
           line-height: rem(65);
         }
       }
-    }
-
-    &__link {
-      color: map-get($colors, "white");
-      text-transform: uppercase;
     }
   }
 }

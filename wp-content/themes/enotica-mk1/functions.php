@@ -49,6 +49,12 @@ function load_svg($file) {
   return false;
 }
 
+function enotica_mk1_theme_support() {
+  add_theme_support( 'post-thumbnails', array( 'page' ) );
+}
+
+add_action( 'after_setup_theme', 'enotica_mk1_theme_support' );
+
 /**
  * Register navigation menus uses wp_nav_menu.
  */

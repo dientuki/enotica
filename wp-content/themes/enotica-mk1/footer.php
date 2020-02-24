@@ -1,17 +1,20 @@
 		<footer class="footer">
-      <div class="footer__top wrapper">
-        <div class="footer__item">
-        </div>
-        <div class="footer__item">
-          <?php dynamic_sidebar("footer"); ?>
-        </div>
-        <div class="footer__item">
-          <div>Redes</div>
-          <?php wp_nav_menu( array(
-              'container_class' => 'menu-social__wrapper',
-              'menu_class' => 'menu-social',
-              'theme_location'=>'social'
-            )); ?>
+      <div class="wrapper">
+        <div class="footer__top">
+          <div class="footer__item">
+            <a class="footer__logo" href="<?php echo get_home_url(); ?>">enotica</a>
+          </div>
+          <div class="footer__item">
+            <?php dynamic_sidebar("footer"); ?>
+          </div>
+          <div class="footer__item">
+            <div class="footer__title uppercase">Redes</div>
+            <?php wp_nav_menu( array(
+                'container_class' => 'menu-social__wrapper',
+                'menu_class' => 'menu-social',
+                'theme_location'=>'social'
+              )); ?>
+          </div>
         </div>
       </div>
       <a class="footer__bottom" href="<?php echo get_home_url(); ?>">www.enotica.com.ar</a>

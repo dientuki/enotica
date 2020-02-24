@@ -3,6 +3,10 @@
 
   &__top {
     padding: rem(45) 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    color: map-get($colors, "white");
   }
 
   &__bottom {
@@ -12,5 +16,18 @@
     line-height: rem(40);
     display: block;
     color: map-get($colors, "white");
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__logo {
+    height: rem(55);
+    position: absolute;
+    @include center("v");
+    left: 0;
+    width: rem(230);
+    background: no-repeat center center map-get($colors, "white");
   }
 }

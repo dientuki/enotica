@@ -113,11 +113,6 @@ require_once (ENOTICAMK1_THEME_FOLDER_PATH . 'widgets/class.hotsale-widget.php')
  * @return array (maybe) modified nav menu class.
  */
 function enotica_mk1_nav_class( $classes, $item, $args ) {
-  if ($args->theme_location === 'social') {
-  //if (in_array($args->theme_location, array('social', 'cart'))) {
-    $classes[] = $item->title;
-  }
-
   $classes[] = $args->menu_class . '__item';
 
   return $classes;

@@ -13,7 +13,7 @@
 
     &:before {
       @include center("h");
-      content:"";
+      content: "";
       background: center center no-repeat;
       width: rem(70);
       height: rem(112);
@@ -44,7 +44,7 @@
     border: none;
   }
 
-  [type="submit"] {
+  [type = submit] {
     position: absolute;
     @include box(45);
     background: map-get($colors, "maroon");

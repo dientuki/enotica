@@ -57,33 +57,3 @@
     color: map-get($colors, "white");
   }
 }
-
-@media (max-width: em(1340)) {
-  .form {
-    &-wrapper {
-      flex-wrap: wrap;
-      width: 100%;
-      max-width: rem(500);
-      margin: 0 auto;
-    }
-
-    &-left,
-    &-right {
-      width: 100%;
-    }
-
-    &-right {
-      margin-top: rem(40);
-    }
-  }
-
-  .page-contact > p {
-    text-align: center;
-  }
-}
-
-@media (max-width: em(1439)) {
-  .page-contact {
-    width: 100%;
-  }
-}

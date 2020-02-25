@@ -11,6 +11,8 @@
 
     <?php wp_head(); ?>
     
+    <link rel="preload" href="<?php echo load_resource('AvenirNextLTPro-Regular.woff2'); ?>" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="<?php echo load_resource('AvenirNextLTPro-Bold.woff2'); ?>" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" type="text/css" href="<?php echo load_resource('appCss.css'); ?>" />
 
 	</head>

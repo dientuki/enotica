@@ -1,19 +1,17 @@
-/*
 @font-face {
-  font-family: myriadpro-regular;
-  src: url("../fonts/myriadpro-regular.woff2") format("woff2"),
-    url("../fonts/myriadpro-regular.woff") format("woff");
+  font-family: avenir-regular;
+  src: url("../fonts/AvenirNextLTPro-Regular.woff2") format("woff2"),
+    url("../fonts/AvenirNextLTPro-Regular.woff") format("woff");
   font-weight: map-get($font-weight, "normal");
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: myriadpro-light;
-  src: url("../fonts/myriadpro-light.woff2") format("woff2"),
-    url("../fonts/myriadpro-light.woff") format("woff");
+  font-family: avenir-bold;
+  src: url("../fonts/AvenirNextLTPro-Bold.woff2") format("woff2"),
+    url("../fonts/AvenirNextLTPro-Bold.woff") format("woff");
   font-weight: map-get($font-weight, "normal");
   font-style: normal;
   font-display: swap;
 }
-*/

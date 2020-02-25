@@ -15,7 +15,7 @@ plugins.push(new WebpackAssetsManifest());
 if (process.env.NODE_ENV == 'development') {
   const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
-  plugins.push(new HardSourceWebpackPlugin());
+  //plugins.push(new HardSourceWebpackPlugin());
 }
 
 module.exports = plugins;

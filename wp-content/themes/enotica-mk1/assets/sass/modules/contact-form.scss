@@ -26,13 +26,7 @@
 }
 
 .form {
-  &-grid-2 {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &-item,
-  &-grid-2 {
+  &-item {
     margin-top: rem(40);
     width: 100%;
 
@@ -42,10 +36,19 @@
   }
 
   &-grid-2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: rem(40);
+    width: 100%;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
     .form-item {
       width: 48%;
       margin: 0;
-    }    
+    }
   }
 
   &-title {

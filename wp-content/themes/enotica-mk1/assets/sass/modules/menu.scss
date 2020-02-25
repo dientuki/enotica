@@ -24,7 +24,7 @@
       text-transform: uppercase;
       position: relative;
       padding-top: rem(70);
-      color: map-get($colors, "maroon");
+      color: map-get($colors, "bottle");
 
       &:before {
         @include box(45);

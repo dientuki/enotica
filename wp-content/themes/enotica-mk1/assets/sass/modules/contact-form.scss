@@ -17,9 +17,6 @@
     width: 100%;
     padding: rem(5) rem(110) rem(5) rem(30);
     height: rem(75);
-  }
-
-  &-text {
     border-radius: rem(10);
   }
 
@@ -29,6 +26,16 @@
 }
 
 .form {
+  &-grid-2 {
+    display: flex;
+    justify-content: space-between;
+
+    .form-item {
+      width: 48%;
+      margin: 0;
+    }
+  }
+
   &-item,
   &-grid-2 {
     margin-top: rem(40);
@@ -36,17 +43,6 @@
 
     &:first-child {
       margin-top: 0;
-    }
-  }
-
-  &-grid-2 {
-    display: flex;
-    justify-content: space-between;
-
-    
-    .form-item {
-      width: 48%;
-      margin: 0;
     }
   }
 

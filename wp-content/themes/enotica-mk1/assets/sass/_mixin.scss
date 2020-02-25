@@ -33,3 +33,8 @@
 @mixin shared($value) {
   #{$value}: map-get($shared, $value);
 }
+
+@mixin notext() {
+  overflow: hidden;
+  text-indent: -999em;
+}

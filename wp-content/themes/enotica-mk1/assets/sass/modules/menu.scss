@@ -36,6 +36,20 @@
         @include center("h");
       }
     }
+
+    .icon {
+      &-search .menu-user__link:before {
+        background-image: url("../images/icon-search.png");
+      }
+
+      &-account .menu-user__link:before {
+        background-image: url("../images/icon-cart.png");
+      }
+
+      &-cart .menu-user__link:before {
+        background-image: url("../images/icon-cart.png");
+      }
+    }
   }
 
   &-primary {

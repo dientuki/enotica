@@ -23,12 +23,13 @@
   }
 
   &__logo {
-    height: rem(55);
+    height: rem(54);
     position: absolute;
-    @include center("v");
     left: 0;
-    width: rem(230);
-    background: no-repeat center center map-get($colors, "white");
+    width: rem(228);
+    background: no-repeat center center url("../images/logo-small.png");
+    @include center("v");
+    @include notext();
   }
 
   &__title {

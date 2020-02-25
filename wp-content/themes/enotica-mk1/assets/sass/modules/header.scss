@@ -1,11 +1,12 @@
 .header {
   &__logo {
-    width: rem(470);
-    height: rem(110);
+    width: rem(476);
+    height: rem(112);
     position: absolute;
     left: rem(22);
-    background: map-get($colors, "maroon");
+    background: no-repeat center center url("../images/logo-big.png");
     @include center("v");
+    @include notext();
   }
 
   &__top {

@@ -57,3 +57,30 @@
     text-indent: -999em;
   }
 }
+
+.page-tasting {
+  &__top {
+    padding: rem(50) 0 rem(60) 0;
+    position: relative;
+
+    &:before {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: rem(50) rem(25) 0 rem(25);
+      border-color: map-get($colors, "white") transparent transparent transparent;
+      position: absolute;
+      content: "";
+      bottom: rem(-50);
+      @include center("h");
+    }
+  }
+
+  &__title {
+    color: map-get($colors, "maroon");
+  }
+
+  .wpcf7 {
+    padding-top: rem(70);
+  }
+}

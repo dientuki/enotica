@@ -3,14 +3,14 @@
     width: rem(476);
     height: rem(112);
     position: absolute;
-    left: rem(22);
+    left: rem(57);
     background: no-repeat center center url("../images/logo-big.png");
     @include center("v");
     @include notext();
   }
 
   &__top {
-    height: rem(240);
+    height: rem(235);
   }
 
   &__nav {

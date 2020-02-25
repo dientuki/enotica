@@ -1,12 +1,20 @@
 .widget-hotsale {
   &__header {
-    padding: rem(60) 0 rem(45) 0;
+    padding: rem(52) 0 rem(42) 0;
     background: map-get($colors, "bottle");
     text-align: center;
   }
 
+  &__title {
+    font-family: avenir-bold;
+    font-size: rem(94);
+  }
+
   &__subtitle {
     color: map-get($colors, "tacticBG");
+    margin-top: rem(11);
+    font-size: rem(20);
+    word-spacing: rem(1);
   }
 
   &__hot {

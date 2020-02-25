@@ -4,10 +4,10 @@
           <div class="footer__item">
             <a class="footer__logo" href="<?php echo get_home_url(); ?>">enotica</a>
           </div>
-          <div class="footer__item">
+          <div class="footer__item footer__contact">
             <?php dynamic_sidebar("footer"); ?>
           </div>
-          <div class="footer__item">
+          <div class="footer__item footer__network">
             <div class="footer__title uppercase">Redes</div>
             <?php wp_nav_menu( array(
                 'container_class' => 'menu-social__wrapper',

@@ -2,15 +2,15 @@
   &-user {
     &__wrapper {
       position: absolute;
-      right: rem(22);
-      @include center("v");
+      right: rem(47);
+      top: rem(97);
     }
 
     &__item {
       display: flex;
       height: 100%;
       align-items: center;
-      margin-left: rem(25);
+      margin-left: rem(31);
       float: left;
       position: relative;
 
@@ -23,8 +23,9 @@
       display: block;
       text-transform: uppercase;
       position: relative;
-      padding-top: rem(70);
+      padding-top: rem(71);
       color: map-get($colors, "bottle");
+      font-size: rem(17);
 
       &:before {
         @include box(45);

@@ -9,11 +9,11 @@
       width: 0;
       height: 0;
       border-style: solid;
-      border-width: rem(50) rem(25) 0 rem(25);
+      border-width: rem(33) rem(20) 0 rem(20);
       border-color: map-get($colors, "tacticBG") transparent transparent transparent;
       position: absolute;
       content: "";
-      bottom: rem(-50);
+      bottom: rem(-33);
       @include center("h");
     }
 
@@ -21,7 +21,7 @@
       display: flex;
       justify-content: space-between;
       margin: 0 auto;
-      width: calc(100% - #{rem(250)});
+      width: calc(100% - #{rem(410)});
     }
 
     &__item {
@@ -35,7 +35,7 @@
       position: relative;
 
       &:before {
-        width: rem(105);
+        width: rem(115);
         height: 100%;
         background: map-get($colors, "maroon");
         position: absolute;
@@ -58,14 +58,16 @@
 
     &__title {
       color: map-get($colors, "maroon");
-      margin-top: rem(25);
-      font-size: rem(17);
+      margin-top: rem(37);
+      font-size: rem(19);
+      font-family: avenir-bold;
+      letter-spacing: rem(1);
     }
 
     &__text {
-      margin-top: rem(2);
-      font-size: rem(18);
-      line-height: rem(21);
+      margin-top: rem(10);
+      font-size: rem(15);
+      line-height: rem(20);
       color: map-get($colors, "tacticText");
       @include clamp(3);
     }

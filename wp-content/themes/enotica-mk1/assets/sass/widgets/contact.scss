@@ -1,6 +1,7 @@
 .widget-contact {
   &__title {
     @include shared("margin-bottom");
+    @include shared("font-size");
   }
 
   &__item {
@@ -9,6 +10,7 @@
     @include shared("height");
     @include shared("line-height");
     @include shared("margin-top");
+    @include shared("font-size");
 
     &:first-child {
       margin-top: 0;

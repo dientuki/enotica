@@ -25,11 +25,21 @@
   &-textarea {
     border-radius: rem(40);
   }
+
+  [type = submit] {
+    @include box(63);
+    display: inline-block;
+    border: none;
+    border-radius: 100rem;
+    background: map-get($colors, "maroon") no-repeat center center;
+    margin-left: rem(20);
+    font-size: 0;
+  }
 }
 
 .form {
   &-item {
-    margin-top: rem(40);
+    margin-top: rem(33);
     width: 100%;
 
     &:first-child {
@@ -40,7 +50,7 @@
   &-grid-2 {
     display: flex;
     justify-content: space-between;
-    margin-top: rem(40);
+    margin-top: rem(33);
     width: 100%;
 
     &:first-child {
@@ -61,5 +71,25 @@
     font-size: rem(32);
     line-height: 1em;
     margin-bottom: rem(67);
+  }
+
+  &-send {
+    margin-top: rem(20);
+    text-align: right;
+    position: relative;
+
+    label {
+      font-family: avenir-bold;
+      display: inline;
+      position: relative;
+      top: rem(6);
+    }
+
+    .ajax-loader {
+      position: absolute;
+      left: 0;
+      @include center("v");
+      @include box(16);
+    }
   }
 }

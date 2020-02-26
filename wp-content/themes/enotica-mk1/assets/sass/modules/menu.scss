@@ -92,6 +92,30 @@
 
     &__link {
       display: block;
+      position: relative;
+      padding-left: rem(30);      
+      color: map-get($colors, "white");
+
+      &:before {
+        @include box(20);
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: center center no-repeat;        
+      }
     }
+
+    .facebook {
+      .menu-social__link:before {
+        background-image: url("../images/icon-facebook.png");
+      }
+    }
+
+    .instagram {
+      .menu-social__link:before {
+        background-image: url("../images/icon-instagram.png");
+      }
+    }    
   }
 }

@@ -33,11 +33,11 @@
     &.icon-phone:before {
       background-image: url("../images/icon-phone.png");
     }
-    
+
     &.icon-email:before {
       background-image: url("../images/icon-envelope.png");
       background-size: 84%;
-    }    
+    }
 
     a {
       color: map-get($colors, "white");

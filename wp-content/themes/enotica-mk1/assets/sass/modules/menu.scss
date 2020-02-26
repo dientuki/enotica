@@ -93,7 +93,7 @@
     &__link {
       display: block;
       position: relative;
-      padding-left: rem(30);      
+      padding-left: rem(30);
       color: map-get($colors, "white");
 
       &:before {
@@ -102,7 +102,7 @@
         position: absolute;
         left: 0;
         top: 0;
-        background: center center no-repeat;        
+        background: center center no-repeat;
       }
     }
 

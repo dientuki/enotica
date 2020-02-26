@@ -6,7 +6,7 @@
 
   &__item {
     position: relative;
-    padding-left: rem(25);
+    padding-left: rem(30);
     @include shared("height");
     @include shared("line-height");
     @include shared("margin-top");
@@ -22,6 +22,25 @@
       position: absolute;
       left: 0;
       top: 0;
+      background: center center no-repeat;
+    }
+
+    &.icon-address:before {
+      background-image: url("../images/icon-location.png");
+      background-size: 68%;
+    }
+
+    &.icon-phone:before {
+      background-image: url("../images/icon-phone.png");
+    }
+    
+    &.icon-email:before {
+      background-image: url("../images/icon-envelope.png");
+      background-size: 84%;
+    }    
+
+    a {
+      color: map-get($colors, "white");
     }
   }
 }

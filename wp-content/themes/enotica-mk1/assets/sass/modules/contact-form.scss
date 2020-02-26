@@ -4,6 +4,7 @@
     color: map-get($colors, "white");
     margin-bottom: rem(10);
     display: block;
+    font-size: rem(18);
   }
 
   &-form {
@@ -15,9 +16,10 @@
   &-text {
     border: none;
     width: 100%;
-    padding: rem(5) rem(110) rem(5) rem(30);
-    height: rem(75);
+    padding: rem(5) rem(30) rem(5) rem(30);
+    height: rem(87);
     border-radius: rem(10);
+    font-size: rem(18);
   }
 
   &-textarea {
@@ -55,5 +57,9 @@
     text-align: center;
     text-transform: uppercase;
     color: map-get($colors, "white");
+    font-family: avenir-bold;
+    font-size: rem(32);
+    line-height: 1em;
+    margin-bottom: rem(67);
   }
 }

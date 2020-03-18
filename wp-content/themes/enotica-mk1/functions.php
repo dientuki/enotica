@@ -125,3 +125,30 @@ function enotica_mk1_menu_link_class( $atts, $item, $args ) {
   return $atts;
 }
 add_filter( 'nav_menu_link_attributes', 'enotica_mk1_menu_link_class', 1, 3 );
+
+
+/**
+ * woocommerce_single_product_summary hook
+ *
+ * @hooked woocommerce_template_single_title - 5
+ * @hooked woocommerce_template_single_price - 10
+ * @hooked woocommerce_template_single_excerpt - 20
+ * @hooked woocommerce_template_single_add_to_cart - 30
+ * @hooked woocommerce_template_single_meta - 40
+ * @hooked woocommerce_template_single_sharing - 50
+ */
+
+add_filter('woocommerce_sale_flash', 'woo_custom_hide_sales_flash');
+function woo_custom_hide_sales_flash() {
+  return false;
+}
+
+add_filter( 'woocommerce_product_add_to_cart_text', 'woo_custom_cart_button_text' );    // 2.1 +
+ 
+function woo_custom_cart_button_text() {
+  return __( "Comprar", 'woocommerce' );
+}
+
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+remove_action( 'woocommerce_before_shop_loop' , 'woocommerce_result_count', 20 );
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );

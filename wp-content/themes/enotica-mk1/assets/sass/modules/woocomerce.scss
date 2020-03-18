@@ -74,3 +74,31 @@ main .woocommerce {
   text-align: center;
   font-size: rem(60);
 }
+
+.woocommerce-message {
+  border-top-color: map-get($colors, "maroon");
+}
+
+.single_add_to_cart_button {
+  background: map-get($colors, "maroon") !important;
+}
+
+.posted_in {
+  a {
+    color: map-get($colors, "maroon");
+    font-weight: bold;
+  }
+}
+
+.woocommerce-cart-form__contents {
+  thead {
+    background: map-get($colors, "maroon");
+    color: map-get($colors, "white");
+  }
+}
+
+.wc-proceed-to-checkout {
+  a {
+    background: map-get($colors, "maroon") !important;
+  }
+}

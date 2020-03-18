@@ -148,7 +148,12 @@ add_filter( 'woocommerce_product_add_to_cart_text', 'woo_custom_cart_button_text
 function woo_custom_cart_button_text() {
   return __( "Comprar", 'woocommerce' );
 }
-
+//loop
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 remove_action( 'woocommerce_before_shop_loop' , 'woocommerce_result_count', 20 );
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+//single product
+add_filter('wc_add_to_cart_message', 'handler_function_name', 10, 2);
+function handler_function_name($message, $product_id) {
+    return "¡Has agregado el producto al carrito!";
+}

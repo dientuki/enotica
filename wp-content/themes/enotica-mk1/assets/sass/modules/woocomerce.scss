@@ -1,5 +1,7 @@
 main .woocommerce {
   padding: 0  rem(40);
+  display: flex;
+  justify-content: center;
 }
 
 .woocommerce-loop-product__title {

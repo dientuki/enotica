@@ -2,7 +2,9 @@
     <?php the_post() ?>
     
     <main>
-      <?php the_title(); ?>
+      <div class="title-section">
+        <?php the_title(); ?>
+      </div>    
       <?php the_content(); ?>
     </main>
 

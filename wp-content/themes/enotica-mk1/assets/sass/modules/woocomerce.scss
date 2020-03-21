@@ -2,6 +2,7 @@ main .woocommerce {
   padding: 0  rem(40);
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 .woocommerce-loop-product__title {
@@ -100,5 +101,44 @@ main .woocommerce {
 .wc-proceed-to-checkout {
   a {
     background: map-get($colors, "maroon") !important;
+  }
+}
+
+@media (min-width: rem(850)) {
+  main .woocommerce {
+    #customer_details,
+    #order_review_heading,
+    #order_review {
+      width: 48%;
+    }
+
+    #customer_details {
+      float: left;
+    }
+
+    #order_review_heading,
+    #order_review {
+      float: right;
+    }
+
+    #order_review_heading {
+      clear: none;
+      padding-top: 0;
+    }
+
+    .col-1,
+    .col-2 {
+      width: 100%;
+      float: none;
+    }
+  }
+}
+
+.woocommerce-columns--addresses {
+  display: flex;
+  justify-content: space-between;
+
+  address {
+    height: 100%;
   }
 }

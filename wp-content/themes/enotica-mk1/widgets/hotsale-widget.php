@@ -9,7 +9,36 @@
   
   <div class="widget-hotsale__container">
     <div class="wrapper">
+    <?php
+ 
+      // En 'cat' deberás colocar el ID de la categoría que deseas mostrar.
+      // En 'posts_per_page' deberás colocar la cantidad de posts que deseas mostrar.
+      $the_query = new WP_Query( array( 'product_cat' => 'hotsale', 'posts_per_page' => 3 ) ); ?>
+        
+      <?php if ( $the_query->have_posts() ) : ?>
       
+      <ul class="container-products">
+        <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+          <!-- Template -->
+          <li class="product type-product status-publish first instock product_cat-hotsale has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
+              <a href="<?php the_permalink(); ?>" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+              <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $the_query->post->ID ) );?>
+              <img src="<?php echo $image[0]; ?>" data-id="<?php echo get_the_ID() ?>">
+              <h2 class="woocommerce-loop-product__title"><?php the_title(); ?></h2>
+              <?php $regular_price = get_post_meta( get_the_ID(), '_regular_price', true );?>
+                <?php $price = get_post_meta( get_the_ID(), '_price', true );?>    
+                <span class="price"><del><span class="woocommerce-Price-amount amount"><?php echo wc_price( $regular_price ); ?> </span></del> <ins><span class="woocommerce-Price-amount amount"><?php echo wc_price( $price ); ?></span></ins></span>
+              </a>
+              <a href="?add-to-cart=<?php echo the_ID();?>" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="<?php echo the_ID();?>" data-product_sku="" aria-label="Añade “<?php the_title(); ?>” a tu carrito" rel="nofollow">
+                <div class="icon-cart-button"></div>
+                <div class="text-button">Comprar</div>
+              </a>
+            </li>
+          <!-- Fin Template--> 
+        <?php endwhile; ?>
+      <?php wp_reset_postdata(); ?>
+      <?php endif; ?>
+      </ul>      
     </div>
   </div>
 

@@ -142,3 +142,21 @@ main .woocommerce {
     height: 100%;
   }
 }
+
+
+.discount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(73);
+  height: rem(39);
+  background: map-get($colors, "tacticDiscount");
+  color: map-get($colors, "white");
+  font-weight: bold;
+  position: absolute;
+  right: rem(16);
+}
+
+.widget-hotsale__sale {
+  color: map-get($colors, "white");
+}

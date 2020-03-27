@@ -165,11 +165,26 @@ main .woocommerce {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
   iframe {
     width: rem(800);
   }
+
   .expand-ubication {
     width: rem(800);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    .wp-block-image {
+      margin-bottom: 0 !important;
+    }
+
+    a {
+      color: map-get($colors, "tacticText");
+      text-transform: uppercase;
+      margin-left: rem(18);
+    }
   }
 
   .footer__top {
@@ -177,8 +192,8 @@ main .woocommerce {
     color: map-get($colors, "tacticText");
     flex-direction: row;
     justify-content: space-between;
-    padding-left:  rem(27);
-    padding-right:  rem(27);
+    padding-left: rem(27);
+    padding-right: rem(27);
 
     .footer__contact {
       padding-left: 0;
@@ -196,49 +211,34 @@ main .woocommerce {
     background-image: url("../images/icon-gps-brown.png") !important;
     background-size: 92% !important;
   }
-  
+
   .widget-contact__item.icon-phone:before {
     background-image: url("../images/icon-phone-brown.png") !important;
     background-size: 96% !important;
   }
-  
+
   .widget-contact__item.icon-email:before {
     background-image: url("../images/icon-mail-brown.png") !important;
     background-size: 94% !important;
   }
-  
+
   .widget-contact__item a {
     color: map-get($colors, "tacticText") !important;
   }
-  
+
   .menu-social__link {
-    color:map-get($colors, "tacticText") !important;
+    color: map-get($colors, "tacticText") !important;
   }
-  
+
   .facebook .menu-social__link:before {
     background-image: url("../images/icon-face-brown.png") !important;
     background-size: 48% !important;
     background-color: map-get($colors, "maroon");
     border-radius: rem(4);
   }
-  
+
   .instagram .menu-social__link:before {
     background-image: url("../images/icon-insta-brown.png") !important;
     background-size: 94% !important;
   }
-  .expand-ubication {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    .wp-block-image {
-      margin-bottom: 0 !important;
-    }
-    a {
-      color: map-get($colors, "tacticText");
-      text-transform: uppercase;
-      margin-left: 18px;
-    }
-  }
-  
 }
-

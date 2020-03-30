@@ -13,7 +13,7 @@
       <?php while ( $pages->have_posts() ): $pages->the_post(); ?>
         <div class="widget-tactic__item">
         <?php $link= get_permalink(); 
-              if ( preg_match('/degustaciones/',$link) || preg_match('/ubicacion/',$link) ) {
+              if ( preg_match('/degustaciones/',$link) || preg_match('/ubicacion/',$link) || preg_match('/contacto/',$link) ) {
                $link=preg_replace('/tactico\//','', $link);
               }
               ?>

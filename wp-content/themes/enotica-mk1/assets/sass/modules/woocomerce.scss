@@ -175,6 +175,7 @@ main .woocommerce {
     display: flex;
     justify-content: left;
     align-items: center;
+    margin: rem(30) 0;
 
     .wp-block-image {
       margin-bottom: 0 !important;
@@ -241,4 +242,27 @@ main .woocommerce {
     background-image: url("../images/icon-insta-brown.png") !important;
     background-size: 94% !important;
   }
+}
+
+.wpcf7-not-valid-tip {
+  padding-top: rem(10) !important;
+  font-weight: bold !important;
+}
+
+.wpcf7-validation-errors {
+  font-weight: bold !important;
+  border: 0 !important;
+  color: #f00 !important;
+}
+
+.wpcf7-submit {
+  background-image: url("../images/icon-flecha.png") !important;
+}
+
+.wpcf7-form-control {
+  background-color: #D8D8D8;
+}
+
+.n2-section-smartslider {
+  z-index: -1;
 }

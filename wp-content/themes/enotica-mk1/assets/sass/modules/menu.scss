@@ -68,6 +68,7 @@
     //Menu-1
     .menu-level-one {
       text-align: center;
+      z-index: 10;
 
       .sub-menu > li {
         opacity: .8;

@@ -55,7 +55,7 @@
 
   &-primary {
     height: rem(65);
-    width: calc(100% - #{rem(44)});
+    width: calc(100% - #{rem(2)});
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -65,9 +65,145 @@
       text-transform: uppercase;
     }
 
+    //Menu-1
+    .menu-level-one {
+      text-align: center;
+
+      .sub-menu > li {
+        opacity: .8;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+      }
+
+      .sub-menu {
+        display: none;
+        padding-top: rem(5);
+      }
+    }
+
+    .menu-level-one:nth-child(1) {
+      background: #8B2131;
+
+      .sub-menu > li {
+        background: #8B2131;
+      }
+
+      .sub-menu > li:hover {
+        opacity: 1;
+      }
+    }
+
+    .menu-level-one:nth-child(1):hover {
+      font-weight: bold;
+
+      .sub-menu {
+        display: block;
+      }
+    }
+
+    .menu-level-one:nth-child(2) {
+      background: #8F2B36;
+
+      .sub-menu > li {
+        background: #8F2B36;
+      }
+
+      .sub-menu > li:hover {
+        opacity: 1;
+      }
+    }
+
+    .menu-level-one:nth-child(2):hover {
+      font-weight: bold;
+
+      .sub-menu {
+        display: block;
+      }
+    }
+
+    .menu-level-one:nth-child(3) {
+      background: #92313A;
+
+      .sub-menu > li {
+        background: #92313A;
+      }
+
+      .sub-menu > li:hover {
+        opacity: 1;
+      }
+    }
+
+    .menu-level-one:nth-child(3):hover {
+      font-weight: bold;
+
+      .sub-menu {
+        display: block;
+      }
+    }
+
+    .menu-level-one:nth-child(4) {
+      background: #9C4248;
+
+      .sub-menu > li {
+        background: #9C4248;
+      }
+
+      .sub-menu > li:hover {
+        opacity: 1;
+      }
+    }
+
+    .menu-level-one:nth-child(4):hover {
+      font-weight: bold;
+
+      .sub-menu {
+        display: block;
+      }
+    }
+
+    .menu-level-one:nth-child(5) {
+      background: #9F474C;
+    }
+
+    .menu-level-one:nth-child(6) {
+      background: #A65256;
+    }
+
+    .menu-level-one:nth-child(7) {
+      background: #A9595C;
+    }
+
+    .menu-level-two {
+      font-family: avenir-bold, Arial, sans-serif;
+      padding: rem(5) 0;
+      border-top: rem(1) dotted #fff !important;
+
+      > .menu-primary__link {
+        font-weight: bold;
+      }
+    }
+
+    .menu-level-three {
+      font-family: avenir-regular, Arial, sans-serif;
+      font-size: rem(15);
+    }
+
+    .no-line-top {
+      border-top: 0 !important;
+    }
+
+    /* End of diferents options of Menu */
+
     > .menu-primary {
       &__item {
         height: 100%;
+        width: 100%;
 
         /* stylelint-disable max-nesting-depth */
         > .menu-primary__link {

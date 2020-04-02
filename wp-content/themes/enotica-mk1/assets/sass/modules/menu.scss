@@ -169,14 +169,26 @@
 
     .menu-level-one:nth-child(5) {
       background: #9F474C;
+
+      :hover {
+        font-weight: bold;
+      }
     }
 
     .menu-level-one:nth-child(6) {
       background: #A65256;
+
+      :hover {
+        font-weight: bold;
+      }
     }
 
     .menu-level-one:nth-child(7) {
       background: #A9595C;
+
+      :hover {
+        font-weight: bold;
+      }
     }
 
     .menu-level-two {

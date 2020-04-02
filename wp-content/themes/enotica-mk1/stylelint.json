@@ -82,7 +82,7 @@
     "selector-combinator-space-after": "always",
     "selector-combinator-space-before": "always",
     "selector-descendant-combinator-no-non-space": true,
-    "selector-max-compound-selectors": 3,
+    "selector-max-compound-selectors": 4,
     "selector-max-specificity" :"1,2,1",
     "selector-no-qualifying-type": [ true, {
       "ignore": ["attribute"]
@@ -138,7 +138,6 @@
         "pseudo-classes"
       ]}
     ],
-    "no-descending-specificity":true,
     "no-duplicate-selectors":true,
     "no-empty-source":true,
     "no-eol-whitespace":true,

@@ -2,7 +2,11 @@ main .woocommerce {
   padding: 0  rem(40);
   display: flex;
   justify-content: center;
-  /*flex-direction: column;*/
+  flex-direction: column;
+}
+
+.content-row {
+  flex-direction: row;
 }
 
 .woocommerce-loop-product__title {
@@ -266,38 +270,36 @@ main .woocommerce {
 /**
  * Account section
  */
- .woocommerce-account {
+.woocommerce-account {
+  .woocommerce-MyAccount-navigation {
+    float: right;
+    width: 23%;
 
-	.woocommerce-MyAccount-navigation {
-	  float: right;
-		width: 23%;
+    li {
+      list-style: none;
+      padding: .5em 0;
+      border-bottom: rem(1) solid #ddd;
 
-		li {
-			list-style: none;
-			padding: 0.5em 0;
-			border-bottom: 1px solid #ddd;
-
-			a {
-				box-shadow: none;
+      a {
+        box-shadow: none;
         color: rgb(34, 34, 34);
 
-				&:hover {
-					box-shadow: 0 3px 0 rgba(15, 15, 15, 1);
+        &:hover {
+          font-weight: bold;
         }
-			}
+      }
 
-			&::before {
-				content: "→";
-				display: inline-block;
-				margin-right: 0.25em;
-				color: #ddd;
-			}
+      &:before {
+        content: "→";
+        display: inline-block;
+        margin-right: .25em;
+        color: #ddd;
+      }
+    }
 
-			&.is-active {
-
-        a {
-          box-shadow: 0 rem(3) 0 rgba(15, 15, 15, 1);
-        }
+    .is-active {
+      a {
+        font-weight: bold;
       }
     }
   }
@@ -322,6 +324,16 @@ input[type = text],
 }
 
 .woocommerce-account .addresses .title .edit {
+  color: map-get($colors, "maroon");
+  font-weight: bold;
+}
+
+.woocommerce-MyAccount-content a {
+  color: map-get($colors, "maroon");
+  font-weight: bold;
+}
+
+.woocommerce-LostPassword a {
   color: map-get($colors, "maroon");
   font-weight: bold;
 }

@@ -5,6 +5,10 @@ main .woocommerce {
   flex-direction: column;
 }
 
+.content-row {
+  flex-direction: row;
+}
+
 .woocommerce-loop-product__title {
   display: flex;
   justify-content: center;
@@ -263,6 +267,73 @@ main .woocommerce {
   background-color: #D8D8D8;
 }
 
-.n2-section-smartslider {
-  z-index: -1;
+/**
+ * Account section
+ */
+.woocommerce-account {
+  .woocommerce-MyAccount-navigation {
+    float: right;
+    width: 23%;
+
+    li {
+      list-style: none;
+      padding: .5em 0;
+      border-bottom: rem(1) solid #ddd;
+
+      a {
+        box-shadow: none;
+        color: rgb(34, 34, 34);
+
+        &:hover {
+          font-weight: bold;
+        }
+      }
+
+      &:before {
+        content: "→";
+        display: inline-block;
+        margin-right: .25em;
+        color: #ddd;
+      }
+    }
+
+    .is-active {
+      a {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .woocommerce-MyAccount-content {
+    float: left;
+  }
+}
+
+input[type = text],
+.input-text {
+  color: #666;
+  border: rem(1) solid #bbb;
+  border-radius: rem(3);
+  display: block;
+  padding: .7em;
+  width: 100%;
+}
+
+.woocommerce-MyAccount-content {
+  padding: 0 rem(20);
+}
+
+.woocommerce-account .addresses .title .edit {
+  color: map-get($colors, "maroon");
+  font-weight: bold;
+}
+
+.woocommerce-MyAccount-content a {
+  color: map-get($colors, "maroon");
+  font-weight: bold;
+}
+
+.woocommerce-LostPassword a {
+  color: map-get($colors, "maroon");
+  font-weight: bold;
 }

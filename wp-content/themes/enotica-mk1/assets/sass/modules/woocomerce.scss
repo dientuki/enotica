@@ -2,7 +2,7 @@ main .woocommerce {
   padding: 0  rem(40);
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  /*flex-direction: column;*/
 }
 
 .woocommerce-loop-product__title {
@@ -263,6 +263,65 @@ main .woocommerce {
   background-color: #D8D8D8;
 }
 
-.n2-section-smartslider {
-  z-index: -1;
+/**
+ * Account section
+ */
+ .woocommerce-account {
+
+	.woocommerce-MyAccount-navigation {
+	  float: right;
+		width: 23%;
+
+		li {
+			list-style: none;
+			padding: 0.5em 0;
+			border-bottom: 1px solid #ddd;
+
+			a {
+				box-shadow: none;
+        color: rgb(34, 34, 34);
+
+				&:hover {
+					box-shadow: 0 3px 0 rgba(15, 15, 15, 1);
+        }
+			}
+
+			&::before {
+				content: "→";
+				display: inline-block;
+				margin-right: 0.25em;
+				color: #ddd;
+			}
+
+			&.is-active {
+
+        a {
+          box-shadow: 0 rem(3) 0 rgba(15, 15, 15, 1);
+        }
+      }
+    }
+  }
+
+  .woocommerce-MyAccount-content {
+    float: left;
+  }
+}
+
+input[type = text],
+.input-text {
+  color: #666;
+  border: rem(1) solid #bbb;
+  border-radius: rem(3);
+  display: block;
+  padding: .7em;
+  width: 100%;
+}
+
+.woocommerce-MyAccount-content {
+  padding: 0 rem(20);
+}
+
+.woocommerce-account .addresses .title .edit {
+  color: map-get($colors, "maroon");
+  font-weight: bold;
 }

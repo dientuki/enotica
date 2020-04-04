@@ -95,7 +95,7 @@ function enotica_mk1_widget_area_registration() {
       'before_widget' => '',
       'after_widget'  => '',      
     )
-  );  
+  );
 }
 
 add_action( 'widgets_init', 'enotica_mk1_widget_area_registration' );

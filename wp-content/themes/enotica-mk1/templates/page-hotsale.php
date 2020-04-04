@@ -1,16 +1,22 @@
-<section class="widget-hotsale">
+<?php
+/*
+Template Name: HotSale Template
+Template Post Type: page
+*/
+?>
 
-  <header class="widget-hotsale__header uppercase">
-    <div class="wrapper">
-      <h1 class="widget-hotsale__title bold"><span class="widget-hotsale__hot">hot</span> <span class="widget-hotsale__sale">sale</span></h1>
-      <h2 class="widget-hotsale__subtitle"><?php echo $subtitle; ?></h2>
-    </div>
-</header>
-  
-  <div class="widget-hotsale__container">
+<?php get_header(); ?>
+
+<?php the_post(); ?>
+
+<main>
+  <div class="title-section">
+    <?php the_title(); ?>
+  </div>    
+  <div class="widget-hotsale__container woocommerce columns-4">
     <div class="wrapper">
     <?php
- 
+
       // En 'cat' deberás colocar el ID de la categoría que deseas mostrar.
       // En 'posts_per_page' deberás colocar la cantidad de posts que deseas mostrar.
       $the_query = new WP_Query( array( 'product_cat' => 'hotsale', 'posts_per_page' => 12 ) ); ?>
@@ -58,5 +64,5 @@
       </ul>      
     </div>
   </div>
-
-</section>
+</main>
+<?php get_footer();

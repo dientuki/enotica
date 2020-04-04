@@ -14,7 +14,7 @@ main .woocommerce {
   justify-content: center;
   font-size: rem(16) !important;
   padding-top: rem(5);
-  color: #ccc;
+  color: #52646D;
   text-transform: uppercase;
 }
 
@@ -35,12 +35,12 @@ main .woocommerce {
 .container-products {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   max-width: rem(1248);
 
   .product {
     width: rem(250);
-    height: rem(320);
+    height: rem(336);
     padding-bottom: 32%; /* Same as width, sets height */
     margin-bottom: 2%; /* (100-32*3)/2 */
     position: relative;
@@ -61,7 +61,7 @@ main .woocommerce {
       display: flex;
       justify-content: center;
       padding: rem(10);
-      font-size: 20px;
+      font-size: rem(20);
       font-weight: bold;
     }
   }
@@ -75,7 +75,7 @@ main .woocommerce {
 
 .text-button {
   padding-left: rem(8);
-  font-family: avenir-bold, Arial, sans-serif;
+  font-weight: bold;
 }
 
 .title-section {
@@ -345,11 +345,15 @@ input[type = text],
   font-weight: bold;
 }
 
-
 .widget-hotsale__container {
+  .container-products {
+    margin: auto;
+  }
+
   .woocommerce-loop-product__link img {
     z-index: -2;
   }
+
   .woocommerce-loop-product__title {
     justify-content: left;
     color: #271818;
@@ -357,10 +361,12 @@ input[type = text],
     font-weight: bold;
     text-transform: none;
   }
+
   .button {
-    height: 40px;
-    margin-top: -40px !important;
+    height: rem(50);
+    margin-top: -rem(40) !important;
     z-index: 1 !important;
+    width: rem(250);
   }
 
   .price {

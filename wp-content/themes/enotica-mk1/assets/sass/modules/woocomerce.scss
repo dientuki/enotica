@@ -29,6 +29,7 @@ main .woocommerce {
 
 .price ins {
   text-decoration: none;
+  padding-left: rem(10);
 }
 
 .container-products {
@@ -39,19 +40,19 @@ main .woocommerce {
 
   .product {
     width: rem(250);
-    height: rem(350);
+    height: rem(320);
     padding-bottom: 32%; /* Same as width, sets height */
     margin-bottom: 2%; /* (100-32*3)/2 */
     position: relative;
 
     .button {
       color: map-get($colors, "white");
-      font-size: rem(20);
+      font-size: rem(18);
       background-color: map-get($colors, "maroon");
       display: flex;
-      justify-content: center;
+      padding-left: rem(39);
       text-transform: uppercase;
-      border-radius: rem(15);
+      border-radius: rem(10);
       align-items: center;
     }
 
@@ -59,18 +60,22 @@ main .woocommerce {
       color: #8B2131;
       display: flex;
       justify-content: center;
+      padding: rem(10);
+      font-size: 20px;
+      font-weight: bold;
     }
   }
 }
 
 .icon-cart-button {
   width: rem(30);
-  height: rem(30);
+  height: rem(24);
   background: url("../images/icon-cart.png") no-repeat;
 }
 
 .text-button {
   padding-left: rem(8);
+  font-family: avenir-bold, Arial, sans-serif;
 }
 
 .title-section {
@@ -338,4 +343,33 @@ input[type = text],
 .woocommerce-LostPassword a {
   color: map-get($colors, "maroon");
   font-weight: bold;
+}
+
+
+.widget-hotsale__container {
+  .woocommerce-loop-product__link img {
+    z-index: -2;
+  }
+  .woocommerce-loop-product__title {
+    justify-content: left;
+    color: #271818;
+    padding-left: rem(10);
+    font-weight: bold;
+    text-transform: none;
+  }
+  .button {
+    height: 40px;
+    margin-top: -40px !important;
+    z-index: 1 !important;
+  }
+
+  .price {
+    justify-content: left !important;
+    align-items: flex-end;
+  }
+
+  .price del {
+    color: #271818;
+    font-size: rem(15);
+  }
 }

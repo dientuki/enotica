@@ -10,7 +10,7 @@
     @include shared("height");
     @include shared("line-height");
     @include shared("margin-top");
-    @include shared("font-size");
+    font-size: rem(17.6);
 
     &:first-child {
       margin-top: 0;

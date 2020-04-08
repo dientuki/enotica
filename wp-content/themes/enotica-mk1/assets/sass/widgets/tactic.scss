@@ -19,14 +19,15 @@
 
     &__container {
       display: flex;
-      justify-content: space-between;
+      flex-wrap: wrap;
+      justify-content: space-around;
       margin: 0 auto;
       width: calc(100% - #{rem(410)});
     }
 
     &__item {
-      max-width: rem(320);
-      min-width: rem(320);
+      max-width: rem(272);
+      min-width: rem(272);
       text-align: center;
     }
 

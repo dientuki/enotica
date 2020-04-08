@@ -1,7 +1,7 @@
 		<footer class="footer">
       <div class="wrapper">
         <div class="footer__top">
-          <div class="footer__item">
+          <div class="footer__item item_logo">
             <a class="footer__logo" href="<?php echo get_home_url(); ?>">enotica</a>
           </div>
           <div class="footer__item footer__contact">

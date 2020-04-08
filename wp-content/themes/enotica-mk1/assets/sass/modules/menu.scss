@@ -1,9 +1,10 @@
 .menu {
   &-user {
     &__wrapper {
-      position: absolute;
-      right: rem(47);
-      top: rem(97);
+      display: flex;
+      flex-direction: row;
+      align-self: center;
+      height: rem(100);
     }
 
     &__item {
@@ -265,6 +266,17 @@
       .menu-social__link:before {
         background-image: url("../images/icon-instagram.png");
       }
+    }
+  }
+}
+
+@media (max-width: rem(630)) {
+  .menu-user__wrapper {
+    width: 100%;
+    justify-content: flex-end;
+
+    .menu-user {
+      width: rem(220);
     }
   }
 }

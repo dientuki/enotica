@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WooCommerce Admin - Development (trunk) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-02-25 01:13:51+0000\n"
+"PO-Revision-Date: 2020-04-17 07:30:47+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,47 @@ msgstr ""
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: es\n"
 "Project-Id-Version: Plugins - WooCommerce Admin - Development (trunk)\n"
+
+#: dist/app/index.js:27
+msgid "Get in front of new customers on Google and secure $150 in ads credit with Kliken’s integration."
+msgstr "Consigue nuevos clientes en Google y asegúrate 150 dólares de crédito para anuncios con la integración de Kliken."
+
+#: dist/app/index.js:27
+msgid "Drive sales with Google Shopping"
+msgstr "Impulsa tus ventas con Google Shopping"
+
+#: dist/app/index.js:27
+msgid "Google Shopping"
+msgstr "Google Shopping"
+
+#: dist/app/index.js:27
+msgid "WooCommerce Square"
+msgstr "WooCommerce Square"
+
+#: dist/app/index.js:27
+msgid "Please select a country / region"
+msgstr "Por favor, selecciona un país / región"
+
+#: dist/app/index.js:27
+msgid "Select country / region"
+msgstr "Seleccionar país/región"
+
+#: dist/app/index.js:27
+msgid "Select a country / region filter match"
+msgstr "Selecciona una coincidencia de filtro de país / región"
+
+#: dist/app/index.js:27
+msgid "Remove country / region filter"
+msgstr "Eliminar el filtro de país / región"
+
+#: src/API/Reports/Customers/Controller.php:582 dist/app/index.js:27
+msgid "Country / Region"
+msgstr "País / Región"
+
+#: src/API/Reports/Taxes/Controller.php:178
+#: src/API/Reports/Customers/Controller.php:251
+msgid "Country / Region."
+msgstr "País / Región."
 
 #: dist/app/index.js:27
 msgid "Customize"
@@ -211,13 +252,13 @@ msgstr "Los programadores de sincronización de informes deben derivarse de la c
 msgid "The requested plugin `%s` could not be installed. Plugin API call failed."
 msgstr "El plugin solicitado `%s` no se pudo instalar. Fallo en la llamada a la API del plugin."
 
-#: src/API/Reports/Orders/Stats/Controller.php:473
 #: src/API/Reports/Orders/Controller.php:357
+#: src/API/Reports/Orders/Stats/Controller.php:473
 msgid "Limit result set to items that don't have the specified tax rate(s) assigned."
 msgstr "Limitar el resultado establecido a artículos en los que no hayas especificado la(s) tasa(s) de impuesto(s) asignada(s)."
 
-#: src/API/Reports/Orders/Stats/Controller.php:463
 #: src/API/Reports/Orders/Controller.php:347
+#: src/API/Reports/Orders/Stats/Controller.php:463
 msgid "Limit result set to items that have the specified tax rate(s) assigned."
 msgstr "Limitar el resultado establecido a artículos en los que hayas especificado la(s) tasa(s) de impuesto(s) asignada(s)."
 
@@ -225,26 +266,26 @@ msgstr "Limitar el resultado establecido a artículos en los que hayas especific
 msgid "Gross Sales."
 msgstr "Ventas brutas."
 
+#: src/API/Reports/Revenue/Stats/Controller.php:177
 #: src/API/Reports/Orders/Stats/Controller.php:157
 #: src/API/Reports/Products/Stats/Controller.php:168
-#: src/API/Reports/Revenue/Stats/Controller.php:177
 msgid "Net Sales."
 msgstr "Ventas netas."
 
-#: src/API/Reports/Categories/Controller.php:182
 #: src/API/Reports/Revenue/Stats/Controller.php:169
+#: src/API/Reports/Categories/Controller.php:182
 msgid "Total Sales."
 msgstr "Ventas totales."
 
-#: src/Features/Onboarding.php:859
+#: src/Features/Onboarding.php:864
 msgid "To disable the new WooCommerce onboarding experience, click the button below."
 msgstr "Para desactivar la nueva experiencia de integración de WooCommerce haz clic en el siguiente botón."
 
-#: src/Features/Onboarding.php:763
+#: src/Features/Onboarding.php:764
 msgid "If you want to try out the new WooCommerce onboarding experience, click the button below."
 msgstr "Si quieres probar la nueva experiencia de integración de WooCommerce haz clic en el siguiente botón."
 
-#: src/Features/Onboarding.php:762 src/Features/Onboarding.php:858
+#: src/Features/Onboarding.php:763 src/Features/Onboarding.php:863
 msgid "New onboarding experience"
 msgstr "Nueva experiencia de integración"
 
@@ -359,7 +400,7 @@ msgstr "Hasta %s"
 
 #. translators: 1: URL of WooCommerce plugin, 2: The minimum WooCommerce
 #. version number
-#: src/FeaturePlugin.php:234
+#: src/FeaturePlugin.php:217
 msgid "The WooCommerce Admin feature plugin requires <a href=\"%1$s\">WooCommerce</a> %2$s or greater to be installed and active."
 msgstr "El destacado plugin WooCommerce Admin necesita <a href=\"%1$s\">WooCommerce</a> %2$s o superior para poder ser instalado y activado."
 
@@ -532,9 +573,9 @@ msgstr "Pedido pendiente"
 msgid "Processing Order"
 msgstr "Pedido en proceso"
 
-#: dist/wp-admin-scripts/onboarding-product-notice.js:1
-#: dist/wp-admin-scripts/onboarding-tax-notice.js:1
 #: dist/wp-admin-scripts/onboarding-homepage-notice.js:1
+#: dist/wp-admin-scripts/onboarding-tax-notice.js:1
+#: dist/wp-admin-scripts/onboarding-product-notice.js:1
 msgid "Continue setup."
 msgstr "Continuar con la configuración."
 
@@ -764,45 +805,45 @@ msgstr "Lo siento, no tienes permiso para crear nuevas páginas."
 msgid "Sorry, you are not allowed to create resources."
 msgstr "Lo siento, no tienes permiso para crear recursos."
 
-#: src/Features/Onboarding.php:906 src/Features/Onboarding.php:912
+#: src/Features/Onboarding.php:911 src/Features/Onboarding.php:917
 msgid "WooCommerce Helper was not able to connect to WooCommerce.com."
 msgstr "WooCommerce Helper no ha podido conectar con WooCommerce.com."
 
-#: src/Features/Onboarding.php:854
+#: src/Features/Onboarding.php:859
 msgid "Quickly access the WooCommerce.com connection flow in Calypso."
 msgstr "Accede rápidamente al flujo de conexión de WooCommerce.com en Calypso."
 
-#: src/Features/Onboarding.php:850
+#: src/Features/Onboarding.php:855
 msgid "Quickly access the Jetpack connection flow in Calypso."
 msgstr "Accede rápidamente al flujo de conexión de Jetpack en Calypso."
 
-#: src/Features/Onboarding.php:848
+#: src/Features/Onboarding.php:853
 msgid "Calypso / WordPress.com"
 msgstr "Calypso / WordPress.com"
 
-#: src/Features/Onboarding.php:841
+#: src/Features/Onboarding.php:846
 msgid "If you need to enable or disable the task list, please click on the button below."
 msgstr "Si tienes que activar o desactivar la lista de tareas, por favor, haz clic en el siguiente botón."
 
-#: src/Features/Onboarding.php:840
+#: src/Features/Onboarding.php:845
 msgid "Task List"
 msgstr "Lista de tareas"
 
-#: src/Features/Onboarding.php:764 src/Features/Onboarding.php:837
-#: src/Features/Onboarding.php:843
+#: src/Features/Onboarding.php:765 src/Features/Onboarding.php:842
+#: src/Features/Onboarding.php:848
 msgid "Enable"
 msgstr "Activar"
 
-#: src/Features/Onboarding.php:836 src/Features/Onboarding.php:844
-#: src/Features/Onboarding.php:860
+#: src/Features/Onboarding.php:841 src/Features/Onboarding.php:849
+#: src/Features/Onboarding.php:865
 msgid "Disable"
 msgstr "Desactivar"
 
-#: src/Features/Onboarding.php:833
+#: src/Features/Onboarding.php:838
 msgid "Profile Setup Wizard"
 msgstr "Asistente de configuración de perfil"
 
-#: src/Features/Onboarding.php:831
+#: src/Features/Onboarding.php:836
 msgid "WooCommerce Onboarding"
 msgstr "WooCommerce Onboarding"
 
@@ -1128,7 +1169,7 @@ msgstr "Sí, en otra plataforma y en persona en tiendas físicas y/o eventos"
 msgid "I'm setting up a store for a client"
 msgstr "Estoy configurando una tienda para un cliente"
 
-#: src/API/OnboardingProfile.php:353
+#: src/API/OnboardingProfile.php:357
 msgid "Whether or not the store was connected to WooCommerce.com during the extension flow."
 msgstr "Si la tienda estaba conectada a WooCommerce.com durante la ejecución de la extensión o no."
 
@@ -1152,7 +1193,7 @@ msgstr "Debes hacer clic para aprobar la instalación de tus extensiones y conec
 msgid "What's your current annual revenue?"
 msgstr "¿Cuáles son tus actuales ingresos anuales?"
 
-#: src/API/OnboardingProfile.php:346
+#: src/API/OnboardingProfile.php:350
 msgid "Whether or not this store was setup for a client."
 msgstr "Si esta tienda se configura para un cliente o no."
 
@@ -1206,7 +1247,7 @@ msgstr "Valora tu experiencia"
 msgid "Current page retrieval should be called on or after the `current_screen` hook."
 msgstr "La recuperación de la página actual debe ser llamada en o después del gancho `current_screen'."
 
-#: src/Features/Onboarding.php:834
+#: src/Features/Onboarding.php:839
 msgid "If you need to enable or disable the setup wizard again, please click on the button below."
 msgstr "Si necesitas activar o desactivar de nuevo el asistente de configuración, por favor, haz clic en el siguiente botón."
 
@@ -1307,10 +1348,6 @@ msgid "Please add a city"
 msgstr "Por favor, añade una ciudad"
 
 #: dist/app/index.js:27
-msgid "Please select a country and state"
-msgstr "Por favor, selecciona un país y provincia"
-
-#: dist/app/index.js:27
 msgid "Please add an address"
 msgstr "Por favor, añade una dirección"
 
@@ -1354,7 +1391,7 @@ msgstr "Lo siento, no tienes permisos para instalar temas en este sitio."
 msgid "Region."
 msgstr "Región."
 
-#: src/API/Reports/Products/Controller.php:211
+#: src/API/Reports/Products/Controller.php:214
 msgid "Product category IDs."
 msgstr "IDs de categorías de producto."
 
@@ -1608,11 +1645,11 @@ msgstr "Plugin no válido."
 msgid "Sorry, you cannot manage plugins."
 msgstr "Lo siento, no puedes gestionar plugins."
 
-#: src/API/OnboardingProfile.php:339
+#: src/API/OnboardingProfile.php:343
 msgid "Whether or not the user opted to purchase items now or later."
 msgstr "Si el usuario aceptó o no comprar artículos ahora o más tarde."
 
-#: src/API/OnboardingProfile.php:331
+#: src/API/OnboardingProfile.php:335
 msgid "Selected store theme."
 msgstr "Tema de tienda seleccionado."
 
@@ -1702,10 +1739,6 @@ msgid "Post code"
 msgstr "Código postal"
 
 #: dist/app/index.js:27
-msgid "Country / State"
-msgstr "País / Provincia"
-
-#: dist/app/index.js:27
 msgid "Address line 1"
 msgstr "Dirección (línea 1)"
 
@@ -1747,7 +1780,7 @@ msgstr "Seguridad"
 
 #: dist/app/index.js:27
 msgid "Get started"
-msgstr "Iniciar"
+msgstr "Primeros pasos"
 
 #: dist/app/index.js:27
 msgid "What type of products will be listed?"
@@ -1938,13 +1971,13 @@ msgstr "Limita la respuesta a recursos con pedidos publicados después de una fe
 msgid "All pending and in-progress import actions have been cancelled."
 msgstr "Se han cancelado todas las acciones de importación pendientes y en curso."
 
-#: src/API/Reports/Import/Controller.php:224
 #: src/API/Reports/Export/Controller.php:109
+#: src/API/Reports/Import/Controller.php:224
 msgid "Regenerate data message."
 msgstr "Regenerar mensaje de de datos."
 
-#: src/API/Reports/Import/Controller.php:218
 #: src/API/Reports/Export/Controller.php:103
+#: src/API/Reports/Import/Controller.php:218
 msgid "Regeneration status."
 msgstr "Estado de regeneración."
 
@@ -1956,8 +1989,8 @@ msgstr "No importar datos de pedidos existentes."
 msgid "Number of days to import."
 msgstr "Número de días a importar."
 
-#: src/API/Reports/Orders/Stats/Controller.php:492
 #: src/API/Reports/Orders/Controller.php:398
+#: src/API/Reports/Orders/Stats/Controller.php:492
 msgid "Limit result set to specific types of refunds."
 msgstr "Limitar el resultado a tipos específicos de reembolsos."
 
@@ -2271,9 +2304,9 @@ msgid "You're still waiting for your customers to make their first orders. While
 msgstr "Todavía estás esperando a que tus clientes hagan sus primeros pedidos. Mientras esperas ¿por qué no aprendes cómo gestionar pedidos?"
 
 #: src/Notes/WC_Admin_Notes_Facebook_Extension.php:71
-#: src/Notes/WC_Admin_Notes_Welcome_Message.php:49
+#: src/Notes/WC_Admin_Notes_Order_Milestones.php:241
 #: src/Notes/WC_Admin_Notes_Mobile_App.php:56
-#: src/Notes/WC_Admin_Notes_Order_Milestones.php:241 dist/app/index.js:27
+#: src/Notes/WC_Admin_Notes_Welcome_Message.php:49 dist/app/index.js:27
 msgid "Learn more"
 msgstr "Aprende más"
 
@@ -2293,13 +2326,13 @@ msgstr "A medida que empiecen a ocurrir cosas en tu tienda, tus mensajes empezar
 msgid "Your inbox is empty"
 msgstr "Tus mensajes están vacíos"
 
-#: src/API/Reports/Customers/Stats/Controller.php:234
 #: src/API/Reports/Customers/Controller.php:432
+#: src/API/Reports/Customers/Stats/Controller.php:234
 msgid "Limit response to objects with specfic usernames."
 msgstr "Limitar la respuesta a los objetos con nombres de usuario específicos."
 
-#: src/API/Reports/Customers/Stats/Controller.php:224
 #: src/API/Reports/Customers/Controller.php:422
+#: src/API/Reports/Customers/Stats/Controller.php:224
 msgid "Limit response to objects with specfic names."
 msgstr "Limitar la respuesta a los objetos con nombres específicos."
 
@@ -2312,28 +2345,28 @@ msgstr "%s (borrado)"
 msgid "Limit result set to products that are low or out of stock."
 msgstr "Limitar el resultado a productos que tengan pocas existencias o agotados."
 
-#: src/API/Reports/Orders/Stats/Controller.php:198
 #: src/API/Reports/Revenue/Stats/Controller.php:191
+#: src/API/Reports/Orders/Stats/Controller.php:198
 msgid "Unique coupons count."
 msgstr "Suma de cupones únicos."
 
-#: src/API/Reports/Customers/Stats/Controller.php:259
 #: src/API/Reports/Customers/Controller.php:457
+#: src/API/Reports/Customers/Stats/Controller.php:259
 msgid "Limit response to objects excluding specfic countries."
 msgstr "Limitar la respuesta a los objetos, excluyendo países específicos."
 
-#: src/API/Reports/Customers/Stats/Controller.php:249
 #: src/API/Reports/Customers/Controller.php:447
+#: src/API/Reports/Customers/Stats/Controller.php:249
 msgid "Limit response to objects excluding emails."
 msgstr "Limitar la respuesta a los objetos, excluyendo los correos electrónicos."
 
-#: src/API/Reports/Customers/Stats/Controller.php:244
 #: src/API/Reports/Customers/Controller.php:442
+#: src/API/Reports/Customers/Stats/Controller.php:244
 msgid "Limit response to objects including emails."
 msgstr "Limitar la respuesta a los objetos, incluidos los correos electrónicos."
 
-#: src/API/Reports/Customers/Stats/Controller.php:229
 #: src/API/Reports/Customers/Controller.php:427
+#: src/API/Reports/Customers/Stats/Controller.php:229
 msgid "Limit response to objects excluding specfic names."
 msgstr "Limitar la respuesta a los objetos, excluyendo nombres específicos."
 
@@ -2403,7 +2436,7 @@ msgstr "Estados del pedido excluidos del informe"
 msgid "Settings for WooCommerce admin reporting."
 msgstr "Ajustes del informe de administración de WooCommerce"
 
-#: src/Notes/DataStore.php:115
+#: src/Notes/DataStore.php:124
 msgid "Invalid data store for admin note."
 msgstr "Almacenamiento de datos no válidos para la nota de administración."
 
@@ -2416,12 +2449,12 @@ msgstr "Lo siento, la obtención de datos de impuestos ha fallado."
 msgid "(Deleted)"
 msgstr "(Borrado)"
 
+#: src/API/Reports/Categories/DataStore.php:277
 #: src/API/Reports/Taxes/Stats/DataStore.php:191
 #: src/API/Reports/Orders/Stats/DataStore.php:298
 #: src/API/Reports/Orders/Stats/DataStore.php:351
 #: src/API/Reports/Products/Stats/DataStore.php:181
 #: src/API/Reports/Products/Stats/DataStore.php:197
-#: src/API/Reports/Categories/DataStore.php:277
 msgid "Sorry, fetching revenue data failed."
 msgstr "Lo siento, la obtención de datos de los ingresos ha fallado."
 
@@ -2473,12 +2506,12 @@ msgstr "Limitar los resultados a los cupones con códigos que coincidan con una 
 msgid "Human readable segment label, either product or variation name."
 msgstr "Etiqueta de segmento legible para humanos, ya sea el nombre del producto o de la variación."
 
-#: src/API/Reports/Taxes/Stats/Controller.php:193
-#: src/API/Reports/Taxes/Controller.php:214
 #: src/API/Reports/Coupons/Controller.php:169
-#: src/API/Reports/Products/Stats/Controller.php:175
-#: src/API/Reports/Categories/Controller.php:188
 #: src/API/Reports/Revenue/Stats/Controller.php:223
+#: src/API/Reports/Categories/Controller.php:188
+#: src/API/Reports/Taxes/Controller.php:214
+#: src/API/Reports/Taxes/Stats/Controller.php:193
+#: src/API/Reports/Products/Stats/Controller.php:175
 msgid "Number of orders."
 msgstr "Número de pedidos."
 
@@ -2490,18 +2523,18 @@ msgstr "Limitar el resultado a todos los artículos que tengan asignado un térm
 msgid "Amount of tax codes."
 msgstr "Cantidad de códigos de impuestos."
 
-#: src/API/Reports/Taxes/Stats/Controller.php:185
 #: src/API/Reports/Taxes/Controller.php:208
+#: src/API/Reports/Taxes/Stats/Controller.php:185
 msgid "Shipping tax."
 msgstr "Tarifa de envío."
 
-#: src/API/Reports/Taxes/Stats/Controller.php:177
 #: src/API/Reports/Taxes/Controller.php:202
+#: src/API/Reports/Taxes/Stats/Controller.php:177
 msgid "Order tax."
 msgstr "Impuesto del pedido."
 
-#: src/API/Reports/Taxes/Stats/Controller.php:169
 #: src/API/Reports/Taxes/Controller.php:196
+#: src/API/Reports/Taxes/Stats/Controller.php:169
 msgid "Total tax."
 msgstr "Total de impuestos."
 
@@ -2658,8 +2691,8 @@ msgstr "Estado de la nota."
 msgid "Type of note."
 msgstr "Tipo de nota."
 
-#: src/API/Notes.php:238 src/API/OnboardingProfile.php:90
-#: src/API/Reports/Import/Controller.php:113
+#: src/API/Reports/Import/Controller.php:113 src/API/Notes.php:238
+#: src/API/OnboardingProfile.php:90
 msgid "Sorry, you cannot edit this resource."
 msgstr "Lo siento, no puedes editar este recurso."
 
@@ -2708,11 +2741,6 @@ msgstr "Código postal."
 msgid "City."
 msgstr "Ciudad."
 
-#: src/API/Reports/Customers/Controller.php:251
-#: src/API/Reports/Taxes/Controller.php:178
-msgid "Country."
-msgstr "País."
-
 #: src/API/Reports/Customers/Controller.php:245
 msgid "Username."
 msgstr "Nombre de usuario."
@@ -2725,8 +2753,8 @@ msgstr "Nombre."
 msgid "User ID."
 msgstr "ID de usuario."
 
-#: src/API/Reports/Customers/Controller.php:227
 #: src/API/Reports/Orders/Controller.php:202
+#: src/API/Reports/Customers/Controller.php:227
 msgid "Customer ID."
 msgstr "ID de cliente."
 
@@ -2795,16 +2823,16 @@ msgstr "Limita el resultado a los pedidos que coincidan con parte de un número 
 msgid "Number of discounted orders."
 msgstr "Cantidad de pedidos con descuento."
 
+#: src/API/Reports/Products/Controller.php:313
 #: src/API/Reports/Products/Stats/Controller.php:382
-#: src/API/Reports/Products/Controller.php:310
 msgid "Limit result to items from the specified categories."
 msgstr "Limita el resultado a los artículos de las categorías especificadas."
 
-#: src/API/Reports/Products/Controller.php:241
+#: src/API/Reports/Products/Controller.php:244
 msgid "Product SKU."
 msgstr "SKU del producto."
 
-#: src/API/Reports/Products/Controller.php:235
+#: src/API/Reports/Products/Controller.php:238
 msgid "Product variations IDs."
 msgstr "IDs de variaciones de producto."
 
@@ -2880,8 +2908,8 @@ msgstr "Estadísticas sobre ingresos."
 msgid "Batch endpoint for getting specific performance indicators from `stats` endpoints."
 msgstr "Variable en lote para obtener indicadores de rendimiento específicos de las variables de «estadísticas»."
 
-#: src/API/Notes.php:175 src/API/Notes.php:189 src/API/OnboardingProfile.php:76
-#: src/API/Reports/Controller.php:63
+#: src/API/Reports/Controller.php:63 src/API/Notes.php:175
+#: src/API/Notes.php:189 src/API/OnboardingProfile.php:76
 msgid "Sorry, you cannot list resources."
 msgstr "Lo siento, no puedes listar recursos."
 
@@ -2889,128 +2917,128 @@ msgstr "Lo siento, no puedes listar recursos."
 msgid "An endpoint used for searching download logs for a specific IP address."
 msgstr "Una variable utilizada para buscar registros de descarga de una dirección IP específica."
 
-#: src/API/Reports/Taxes/Stats/Controller.php:383
 #: src/API/Reports/Coupons/Stats/Controller.php:345
+#: src/API/Reports/Revenue/Stats/Controller.php:428
+#: src/API/Reports/Taxes/Stats/Controller.php:383
 #: src/API/Reports/Orders/Stats/Controller.php:505
 #: src/API/Reports/Products/Stats/Controller.php:409
-#: src/API/Reports/Revenue/Stats/Controller.php:428
 msgid "Segment the response by additional constraint."
 msgstr "Segmentar la respuesta por restricciones adicionales."
 
+#: src/API/Reports/Orders/Controller.php:337
 #: src/API/Reports/Orders/Stats/Controller.php:454
 #: src/API/Reports/Orders/Stats/Controller.php:483
-#: src/API/Reports/Orders/Controller.php:337
 msgid "Limit result set to items that don't have the specified coupon(s) assigned."
 msgstr "Limita el resultado a los artículos que no tienen asignado el cupón o los cupones especificados."
 
-#: src/API/Reports/Orders/Stats/Controller.php:445
 #: src/API/Reports/Orders/Controller.php:327
+#: src/API/Reports/Orders/Stats/Controller.php:445
 msgid "Limit result set to items that have the specified coupon(s) assigned."
 msgstr "Limita el resultado a los artículos que tienen asignado el cupón o los cupones especificados."
 
-#: src/API/Reports/Orders/Stats/Controller.php:416
-#: src/API/Reports/Orders/Controller.php:377
 #: src/API/Reports/Categories/Controller.php:296
+#: src/API/Reports/Orders/Controller.php:377
+#: src/API/Reports/Orders/Stats/Controller.php:416
 msgid "Limit result set to items that don't have the specified order status."
 msgstr "Limita el resultado establecido a los artículos que no tienen el estado de pedido especificado."
 
-#: src/API/Reports/Orders/Stats/Controller.php:405
-#: src/API/Reports/Orders/Controller.php:367
 #: src/API/Reports/Categories/Controller.php:286
+#: src/API/Reports/Orders/Controller.php:367
+#: src/API/Reports/Orders/Stats/Controller.php:405
 msgid "Limit result set to items that have the specified order status."
 msgstr "Limita el resultado fijado a artículos que tienen el estado de pedido especificado."
 
-#: src/API/Reports/Taxes/Stats/Controller.php:360
 #: src/API/Reports/Coupons/Stats/Controller.php:322
+#: src/API/Reports/Revenue/Stats/Controller.php:414
+#: src/API/Reports/Categories/Controller.php:272
+#: src/API/Reports/Taxes/Stats/Controller.php:360
 #: src/API/Reports/Downloads/Stats/Controller.php:277
 #: src/API/Reports/Orders/Stats/Controller.php:381
 #: src/API/Reports/Products/Stats/Controller.php:368
-#: src/API/Reports/Categories/Controller.php:272
-#: src/API/Reports/Revenue/Stats/Controller.php:414
 msgid "Time interval to use for buckets in the returned data."
 msgstr "Intervalo de tiempo para utilizar para los contenedores en los datos devueltos."
 
-#: src/API/Reports/Taxes/Stats/Controller.php:281
 #: src/API/Reports/Coupons/Stats/Controller.php:244
+#: src/API/Reports/Revenue/Stats/Controller.php:330
+#: src/API/Reports/Taxes/Stats/Controller.php:281
 #: src/API/Reports/Downloads/Stats/Controller.php:201
 #: src/API/Reports/Orders/Stats/Controller.php:303
 #: src/API/Reports/Products/Stats/Controller.php:264
-#: src/API/Reports/Revenue/Stats/Controller.php:330
 msgid "The date the report end, as GMT."
 msgstr "La fecha de fin del informe, en GMT."
 
-#: src/API/Reports/Taxes/Stats/Controller.php:275
 #: src/API/Reports/Coupons/Stats/Controller.php:238
+#: src/API/Reports/Revenue/Stats/Controller.php:324
+#: src/API/Reports/Taxes/Stats/Controller.php:275
 #: src/API/Reports/Downloads/Stats/Controller.php:195
 #: src/API/Reports/Orders/Stats/Controller.php:297
 #: src/API/Reports/Products/Stats/Controller.php:258
-#: src/API/Reports/Revenue/Stats/Controller.php:324
 msgid "The date the report end, in the site's timezone."
 msgstr "La fecha de fin del informe, en la zona horaria del sitio."
 
-#: src/API/Reports/Taxes/Stats/Controller.php:269
 #: src/API/Reports/Coupons/Stats/Controller.php:232
+#: src/API/Reports/Revenue/Stats/Controller.php:318
+#: src/API/Reports/Taxes/Stats/Controller.php:269
 #: src/API/Reports/Downloads/Stats/Controller.php:189
 #: src/API/Reports/Orders/Stats/Controller.php:291
 #: src/API/Reports/Products/Stats/Controller.php:252
-#: src/API/Reports/Revenue/Stats/Controller.php:318
 msgid "The date the report start, as GMT."
 msgstr "La fecha de inicio del informe, en GMT."
 
-#: src/API/Reports/Taxes/Stats/Controller.php:263
 #: src/API/Reports/Coupons/Stats/Controller.php:226
+#: src/API/Reports/Revenue/Stats/Controller.php:312
+#: src/API/Reports/Taxes/Stats/Controller.php:263
 #: src/API/Reports/Downloads/Stats/Controller.php:183
 #: src/API/Reports/Orders/Stats/Controller.php:285
 #: src/API/Reports/Products/Stats/Controller.php:246
-#: src/API/Reports/Revenue/Stats/Controller.php:312
 msgid "The date the report start, in the site's timezone."
 msgstr "La fecha de inicio del informe, en la zona horaria del sitio."
 
-#: src/API/Reports/Taxes/Stats/Controller.php:256
 #: src/API/Reports/Coupons/Stats/Controller.php:219
+#: src/API/Reports/Revenue/Stats/Controller.php:305
+#: src/API/Reports/Taxes/Stats/Controller.php:256
 #: src/API/Reports/Downloads/Stats/Controller.php:176
 #: src/API/Reports/Orders/Stats/Controller.php:278
 #: src/API/Reports/Products/Stats/Controller.php:239
-#: src/API/Reports/Revenue/Stats/Controller.php:305
 msgid "Type of interval."
 msgstr "Tipo de intervalo."
 
-#: src/API/Reports/Taxes/Stats/Controller.php:248
 #: src/API/Reports/Coupons/Stats/Controller.php:211
+#: src/API/Reports/Revenue/Stats/Controller.php:297
+#: src/API/Reports/Taxes/Stats/Controller.php:248
 #: src/API/Reports/Downloads/Stats/Controller.php:168
 #: src/API/Reports/Orders/Stats/Controller.php:270
 #: src/API/Reports/Products/Stats/Controller.php:231
-#: src/API/Reports/Revenue/Stats/Controller.php:297
 msgid "Reports data grouped by intervals."
 msgstr "Datos de los informes agrupados por intervalos."
 
-#: src/API/Reports/Taxes/Stats/Controller.php:222
-#: src/API/Reports/Taxes/Stats/Controller.php:287
 #: src/API/Reports/Coupons/Stats/Controller.php:185
 #: src/API/Reports/Coupons/Stats/Controller.php:250
+#: src/API/Reports/Revenue/Stats/Controller.php:266
+#: src/API/Reports/Revenue/Stats/Controller.php:336
+#: src/API/Reports/Taxes/Stats/Controller.php:222
+#: src/API/Reports/Taxes/Stats/Controller.php:287
 #: src/API/Reports/Downloads/Stats/Controller.php:207
 #: src/API/Reports/Orders/Stats/Controller.php:239
 #: src/API/Reports/Orders/Stats/Controller.php:309
 #: src/API/Reports/Products/Stats/Controller.php:205
 #: src/API/Reports/Products/Stats/Controller.php:270
-#: src/API/Reports/Revenue/Stats/Controller.php:266
-#: src/API/Reports/Revenue/Stats/Controller.php:336
 msgid "Interval subtotals."
 msgstr "Subtotales del intervalo."
 
-#: src/API/Reports/Taxes/Stats/Controller.php:216
 #: src/API/Reports/Coupons/Stats/Controller.php:179
+#: src/API/Reports/Revenue/Stats/Controller.php:260
+#: src/API/Reports/Taxes/Stats/Controller.php:216
 #: src/API/Reports/Orders/Stats/Controller.php:233
 #: src/API/Reports/Products/Stats/Controller.php:192
-#: src/API/Reports/Revenue/Stats/Controller.php:260
 msgid "Segment identificator."
 msgstr "Identificador del segmento."
 
-#: src/API/Reports/Taxes/Stats/Controller.php:208
 #: src/API/Reports/Coupons/Stats/Controller.php:171
+#: src/API/Reports/Revenue/Stats/Controller.php:252
+#: src/API/Reports/Taxes/Stats/Controller.php:208
 #: src/API/Reports/Orders/Stats/Controller.php:225
 #: src/API/Reports/Products/Stats/Controller.php:184
-#: src/API/Reports/Revenue/Stats/Controller.php:252
 msgid "Reports data grouped by segment condition."
 msgstr "Informa los datos agrupados por condición del segmento."
 
@@ -3026,8 +3054,8 @@ msgstr "Número de pedidos realizados por los nuevos clientes"
 msgid "Number of orders done by returning customers"
 msgstr "Número de pedidos realizados por clientes habituales."
 
-#: src/API/Reports/Orders/Stats/Controller.php:192
 #: src/API/Reports/Revenue/Stats/Controller.php:185
+#: src/API/Reports/Orders/Stats/Controller.php:192
 msgid "Amount discounted by coupons."
 msgstr "Cantidad descontada por cupones."
 
@@ -3048,8 +3076,8 @@ msgstr "Promedio de valor del pedido."
 msgid "Add additional piece of info about each coupon to the report."
 msgstr "Añade información adicional sobre cada cupón al informe."
 
-#: src/API/Reports/Coupons/Stats/Controller.php:336
 #: src/API/Reports/Coupons/Controller.php:276
+#: src/API/Reports/Coupons/Stats/Controller.php:336
 msgid "Limit result set to coupons assigned specific coupon IDs."
 msgstr "Limita el resultado a los cupones a los que se les han asignado IDs de cupón específicos."
 
@@ -3077,8 +3105,8 @@ msgstr "Fecha de creación del cupón."
 msgid "Coupon code."
 msgstr "Código del cupón."
 
-#: src/API/Reports/Coupons/Stats/Controller.php:146
 #: src/API/Reports/Coupons/Controller.php:163
+#: src/API/Reports/Coupons/Stats/Controller.php:146
 msgid "Net discount amount."
 msgstr "Cantidad de descuento neto."
 
@@ -3095,7 +3123,7 @@ msgid "Search by similar tax code."
 msgstr "Buscar por código de impuestos similar."
 
 #: src/API/Reports/Variations/Controller.php:328
-#: src/API/Reports/Products/Controller.php:339
+#: src/API/Reports/Products/Controller.php:342
 msgid "Add additional piece of info about each product to the report."
 msgstr "Añade una pieza adicional de información sobre cada producto al informe."
 
@@ -3105,23 +3133,23 @@ msgid "Limit result to items with specified variation ids."
 msgstr "Limita el resultado a artículos con IDs de variación específicos."
 
 #: src/API/Reports/Variations/Controller.php:310
+#: src/API/Reports/Products/Controller.php:332
 #: src/API/Reports/Products/Stats/Controller.php:391
-#: src/API/Reports/Products/Controller.php:329
 msgid "Limit result to items with specified product ids."
 msgstr "Limita el resultado a artículos con IDs de producto específicos."
 
 #: src/API/Reports/Variations/Controller.php:243
-#: src/API/Reports/Products/Controller.php:229
+#: src/API/Reports/Products/Controller.php:232
 msgid "Product inventory threshold for low stock."
 msgstr "Umbral de inventario de productos para pocas existencias."
 
 #: src/API/Reports/Variations/Controller.php:237
-#: src/API/Reports/Products/Controller.php:223
+#: src/API/Reports/Products/Controller.php:226
 msgid "Product inventory quantity."
 msgstr "Cantidad de inventario del producto."
 
 #: src/API/Reports/Variations/Controller.php:231
-#: src/API/Reports/Products/Controller.php:217
+#: src/API/Reports/Products/Controller.php:220
 msgid "Product inventory status."
 msgstr "Estado de inventario del producto."
 
@@ -3130,34 +3158,34 @@ msgid "Product attributes."
 msgstr "Atributos del producto."
 
 #: src/API/Reports/Variations/Controller.php:219
-#: src/API/Reports/Products/Controller.php:205
+#: src/API/Reports/Products/Controller.php:208
 msgid "Product link."
 msgstr "Enlace del producto."
 
 #: src/API/Reports/Variations/Controller.php:213
-#: src/API/Reports/Products/Controller.php:199
+#: src/API/Reports/Products/Controller.php:202
 msgid "Product image."
 msgstr "Imagen del producto."
 
 #: src/API/Reports/Variations/Controller.php:207
-#: src/API/Reports/Products/Controller.php:193
+#: src/API/Reports/Products/Controller.php:196
 msgid "Product price."
 msgstr "Precio del producto."
 
 #: src/API/Reports/Variations/Controller.php:194
-#: src/API/Reports/Products/Controller.php:180
+#: src/API/Reports/Products/Controller.php:183
 msgid "Number of orders product appeared in."
 msgstr "Número de pedidos en los que ha aparecido el producto."
 
 #: src/API/Reports/Variations/Controller.php:188
-#: src/API/Reports/Products/Controller.php:174
+#: src/API/Reports/Products/Controller.php:177
 msgid "Total Net Sales of all items sold."
 msgstr "Ingresos netos totales de todos los artículos vendidos."
 
 #: src/API/Reports/Variations/Controller.php:182
 #: src/API/Reports/Orders/Controller.php:208
+#: src/API/Reports/Products/Controller.php:171
 #: src/API/Reports/Products/Stats/Controller.php:161
-#: src/API/Reports/Products/Controller.php:168
 msgid "Number of items sold."
 msgstr "Número de artículos vendidos."
 
@@ -3203,11 +3231,11 @@ msgstr "Identificador único."
 
 #: src/API/Reports/Variations/Controller.php:201
 #: src/API/Reports/Stock/Controller.php:385
-#: src/API/Reports/Products/Controller.php:187
+#: src/API/Reports/Products/Controller.php:190
 msgid "Product name."
 msgstr "Nombre del producto."
 
-#: src/API/ProductVariations.php:98 src/API/Reports/Stock/Controller.php:379
+#: src/API/Reports/Stock/Controller.php:379 src/API/ProductVariations.php:98
 msgid "Product parent ID."
 msgstr "ID del producto padre."
 
@@ -3216,13 +3244,13 @@ msgstr "ID del producto padre."
 msgid "Unique identifier for the resource."
 msgstr "Identificador único del recurso."
 
-#: src/API/Reports/Downloads/Stats/Controller.php:365
 #: src/API/Reports/Downloads/Controller.php:374
+#: src/API/Reports/Downloads/Stats/Controller.php:365
 msgid "Limit response to objects that don't have a specified ip address."
 msgstr "Limita la respuesta a objetos que no tengan una dirección ip especificada."
 
-#: src/API/Reports/Downloads/Stats/Controller.php:356
 #: src/API/Reports/Downloads/Controller.php:365
+#: src/API/Reports/Downloads/Stats/Controller.php:356
 msgid "Limit response to objects that have a specified ip address."
 msgstr "Limita la respuesta a objetos que tengan una dirección ip especificada."
 
@@ -3234,29 +3262,29 @@ msgstr "Limita la respuesta a objetos que no tengan los IDs de usuario especific
 msgid "Limit response to objects that have the specified user ids."
 msgstr "Limita la respuesta a objetos que tengan los IDs de usuario especificados."
 
-#: src/API/Reports/Downloads/Stats/Controller.php:329
 #: src/API/Reports/Downloads/Controller.php:338
+#: src/API/Reports/Downloads/Stats/Controller.php:329
 #: src/API/Reports/Orders/Controller.php:427
 msgid "Limit result set to items that don't have the specified order ids."
 msgstr "Limita el resultado establecido a artículos que no tengan los IDs de pedido especificados."
 
-#: src/API/Reports/Downloads/Stats/Controller.php:320
 #: src/API/Reports/Downloads/Controller.php:329
+#: src/API/Reports/Downloads/Stats/Controller.php:320
 #: src/API/Reports/Orders/Controller.php:418
 msgid "Limit result set to items that have the specified order ids."
 msgstr "Limita el resultado establecido a artículos que tengan los IDs de pedido especificados."
 
-#: src/API/Reports/Downloads/Stats/Controller.php:311
 #: src/API/Reports/Downloads/Controller.php:319
-#: src/API/Reports/Orders/Stats/Controller.php:436
+#: src/API/Reports/Downloads/Stats/Controller.php:311
 #: src/API/Reports/Orders/Controller.php:317
+#: src/API/Reports/Orders/Stats/Controller.php:436
 msgid "Limit result set to items that don't have the specified product(s) assigned."
 msgstr "Limita el resultado establecido a artículo(s) que no tenga(n) el/los producto(s) especificado(s) asignado(s)"
 
-#: src/API/Reports/Downloads/Stats/Controller.php:301
 #: src/API/Reports/Downloads/Controller.php:309
-#: src/API/Reports/Orders/Stats/Controller.php:426
+#: src/API/Reports/Downloads/Stats/Controller.php:301
 #: src/API/Reports/Orders/Controller.php:307
+#: src/API/Reports/Orders/Stats/Controller.php:426
 msgid "Limit result set to items that have the specified product(s) assigned."
 msgstr "Limita el resultado establecido a artículos que tengan el/los producto(s) específico(s) asignado(s)."
 
@@ -3264,113 +3292,109 @@ msgstr "Limita el resultado establecido a artículos que tengan el/los producto(
 msgid "Indicates whether all the conditions should be true for the resulting set, or if any one of them is sufficient. Match affects the following parameters: products, orders, username, ip_address."
 msgstr "Indica si todas las condiciones deben ser ciertas para el conjunto resultante, o si alguna de ellas es suficiente. La coincidencia afecta a los siguientes parámetros: productos, pedidos, nombre de usuario, dirección IP."
 
-#: src/API/Notes.php:330 src/API/Reports/Variations/Controller.php:297
-#: src/API/Reports/Customers/Controller.php:378
-#: src/API/Reports/Taxes/Stats/Controller.php:347
-#: src/API/Reports/Taxes/Controller.php:270
-#: src/API/Reports/Coupons/Stats/Controller.php:310
 #: src/API/Reports/Coupons/Controller.php:264
-#: src/API/Reports/Stock/Controller.php:478
-#: src/API/Reports/Downloads/Stats/Controller.php:267
-#: src/API/Reports/Downloads/Controller.php:289
-#: src/API/Reports/Orders/Stats/Controller.php:369
-#: src/API/Reports/Orders/Controller.php:296
-#: src/API/Reports/Products/Stats/Controller.php:351
-#: src/API/Reports/Products/Controller.php:295
-#: src/API/Reports/Categories/Controller.php:258
+#: src/API/Reports/Coupons/Stats/Controller.php:310
 #: src/API/Reports/Revenue/Stats/Controller.php:396
+#: src/API/Reports/Categories/Controller.php:258
+#: src/API/Reports/Taxes/Controller.php:270
+#: src/API/Reports/Taxes/Stats/Controller.php:347
+#: src/API/Reports/Variations/Controller.php:297
+#: src/API/Reports/Stock/Controller.php:478
+#: src/API/Reports/Downloads/Controller.php:289
+#: src/API/Reports/Downloads/Stats/Controller.php:267
+#: src/API/Reports/Orders/Controller.php:296
+#: src/API/Reports/Orders/Stats/Controller.php:369
+#: src/API/Reports/Products/Controller.php:298
+#: src/API/Reports/Products/Stats/Controller.php:351
+#: src/API/Reports/Customers/Controller.php:378 src/API/Notes.php:330
 msgid "Sort collection by object attribute."
 msgstr "Ordena la colección por atributo de objeto."
 
-#: src/API/Notes.php:323 src/API/Reports/Variations/Controller.php:290
-#: src/API/Reports/Customers/Controller.php:371
-#: src/API/Reports/Taxes/Stats/Controller.php:340
-#: src/API/Reports/Taxes/Controller.php:263
-#: src/API/Reports/Coupons/Stats/Controller.php:303
 #: src/API/Reports/Coupons/Controller.php:257
-#: src/API/Reports/Stock/Controller.php:471
-#: src/API/Reports/Downloads/Stats/Controller.php:260
-#: src/API/Reports/Downloads/Controller.php:282
-#: src/API/Reports/Orders/Stats/Controller.php:362
-#: src/API/Reports/Orders/Controller.php:289
-#: src/API/Reports/Products/Stats/Controller.php:344
-#: src/API/Reports/Products/Controller.php:288
-#: src/API/Reports/Categories/Controller.php:251
+#: src/API/Reports/Coupons/Stats/Controller.php:303
 #: src/API/Reports/Revenue/Stats/Controller.php:389
+#: src/API/Reports/Categories/Controller.php:251
+#: src/API/Reports/Taxes/Controller.php:263
+#: src/API/Reports/Taxes/Stats/Controller.php:340
+#: src/API/Reports/Variations/Controller.php:290
+#: src/API/Reports/Stock/Controller.php:471
+#: src/API/Reports/Downloads/Controller.php:282
+#: src/API/Reports/Downloads/Stats/Controller.php:260
+#: src/API/Reports/Orders/Controller.php:289
+#: src/API/Reports/Orders/Stats/Controller.php:362
+#: src/API/Reports/Products/Controller.php:291
+#: src/API/Reports/Products/Stats/Controller.php:344
+#: src/API/Reports/Customers/Controller.php:371 src/API/Notes.php:323
 msgid "Order sort attribute ascending or descending."
 msgstr "Ordenar atributo en orden ascendente o descendente."
 
-#: src/API/Leaderboards.php:461
-#: src/API/Reports/PerformanceIndicators/Controller.php:518
-#: src/API/Reports/Variations/Controller.php:284
-#: src/API/Reports/Taxes/Stats/Controller.php:334
-#: src/API/Reports/Taxes/Controller.php:257
+#: src/API/Leaderboards.php:461 src/API/Reports/Coupons/Controller.php:251
 #: src/API/Reports/Coupons/Stats/Controller.php:297
-#: src/API/Reports/Coupons/Controller.php:251
-#: src/API/Reports/Downloads/Stats/Controller.php:254
-#: src/API/Reports/Downloads/Controller.php:276
-#: src/API/Reports/Orders/Stats/Controller.php:356
-#: src/API/Reports/Orders/Controller.php:283
-#: src/API/Reports/Products/Stats/Controller.php:338
-#: src/API/Reports/Products/Controller.php:282
-#: src/API/Reports/Categories/Controller.php:245
 #: src/API/Reports/Revenue/Stats/Controller.php:383
+#: src/API/Reports/Categories/Controller.php:245
+#: src/API/Reports/Taxes/Controller.php:257
+#: src/API/Reports/Taxes/Stats/Controller.php:334
+#: src/API/Reports/Variations/Controller.php:284
+#: src/API/Reports/PerformanceIndicators/Controller.php:518
+#: src/API/Reports/Downloads/Controller.php:276
+#: src/API/Reports/Downloads/Stats/Controller.php:254
+#: src/API/Reports/Orders/Controller.php:283
+#: src/API/Reports/Orders/Stats/Controller.php:356
+#: src/API/Reports/Products/Controller.php:285
+#: src/API/Reports/Products/Stats/Controller.php:338
 msgid "Limit response to resources published before a given ISO8601 compliant date."
 msgstr "Limita la respuesta a los recursos publicados antes de una fecha conforme con la norma ISO8601."
 
-#: src/API/Leaderboards.php:455
-#: src/API/Reports/PerformanceIndicators/Controller.php:512
-#: src/API/Reports/Variations/Controller.php:278
-#: src/API/Reports/Taxes/Stats/Controller.php:328
-#: src/API/Reports/Taxes/Controller.php:251
+#: src/API/Leaderboards.php:455 src/API/Reports/Coupons/Controller.php:245
 #: src/API/Reports/Coupons/Stats/Controller.php:291
-#: src/API/Reports/Coupons/Controller.php:245
-#: src/API/Reports/Downloads/Stats/Controller.php:248
-#: src/API/Reports/Downloads/Controller.php:270
-#: src/API/Reports/Orders/Stats/Controller.php:350
-#: src/API/Reports/Orders/Controller.php:277
-#: src/API/Reports/Products/Stats/Controller.php:332
-#: src/API/Reports/Products/Controller.php:276
-#: src/API/Reports/Categories/Controller.php:239
 #: src/API/Reports/Revenue/Stats/Controller.php:377
+#: src/API/Reports/Categories/Controller.php:239
+#: src/API/Reports/Taxes/Controller.php:251
+#: src/API/Reports/Taxes/Stats/Controller.php:328
+#: src/API/Reports/Variations/Controller.php:278
+#: src/API/Reports/PerformanceIndicators/Controller.php:512
+#: src/API/Reports/Downloads/Controller.php:270
+#: src/API/Reports/Downloads/Stats/Controller.php:248
+#: src/API/Reports/Orders/Controller.php:277
+#: src/API/Reports/Orders/Stats/Controller.php:350
+#: src/API/Reports/Products/Controller.php:279
+#: src/API/Reports/Products/Stats/Controller.php:332
 msgid "Limit response to resources published after a given ISO8601 compliant date."
 msgstr "Limita la respuesta a los recursos publicados después de una determinada fecha conforme con la norma ISO8601."
 
-#: src/API/Notes.php:351 src/API/Leaderboards.php:446
-#: src/API/Reports/Variations/Controller.php:269
-#: src/API/Reports/Customers/Controller.php:362
-#: src/API/Reports/Taxes/Stats/Controller.php:319
-#: src/API/Reports/Taxes/Controller.php:242
+#: src/API/Leaderboards.php:446 src/API/Reports/Coupons/Controller.php:236
 #: src/API/Reports/Coupons/Stats/Controller.php:282
-#: src/API/Reports/Coupons/Controller.php:236
-#: src/API/Reports/Stock/Controller.php:438
-#: src/API/Reports/Downloads/Stats/Controller.php:239
-#: src/API/Reports/Downloads/Controller.php:261
-#: src/API/Reports/Orders/Stats/Controller.php:341
-#: src/API/Reports/Orders/Controller.php:268
-#: src/API/Reports/Products/Stats/Controller.php:323
-#: src/API/Reports/Products/Controller.php:267
-#: src/API/Reports/Categories/Controller.php:230
 #: src/API/Reports/Revenue/Stats/Controller.php:368
+#: src/API/Reports/Categories/Controller.php:230
+#: src/API/Reports/Taxes/Controller.php:242
+#: src/API/Reports/Taxes/Stats/Controller.php:319
+#: src/API/Reports/Variations/Controller.php:269
+#: src/API/Reports/Stock/Controller.php:438
+#: src/API/Reports/Downloads/Controller.php:261
+#: src/API/Reports/Downloads/Stats/Controller.php:239
+#: src/API/Reports/Orders/Controller.php:268
+#: src/API/Reports/Orders/Stats/Controller.php:341
+#: src/API/Reports/Products/Controller.php:270
+#: src/API/Reports/Products/Stats/Controller.php:323
+#: src/API/Reports/Customers/Controller.php:362 src/API/Notes.php:351
 msgid "Maximum number of items to be returned in result set."
 msgstr "Número máximo de artículos a devolver en el conjunto de resultados."
 
-#: src/API/Notes.php:343 src/API/Leaderboards.php:438
-#: src/API/Reports/Variations/Controller.php:261
-#: src/API/Reports/Customers/Controller.php:354
-#: src/API/Reports/Taxes/Stats/Controller.php:311
-#: src/API/Reports/Taxes/Controller.php:234
+#: src/API/Leaderboards.php:438 src/API/Reports/Coupons/Controller.php:228
 #: src/API/Reports/Coupons/Stats/Controller.php:274
-#: src/API/Reports/Coupons/Controller.php:228
-#: src/API/Reports/Stock/Controller.php:430
-#: src/API/Reports/Downloads/Stats/Controller.php:231
-#: src/API/Reports/Downloads/Controller.php:253
-#: src/API/Reports/Orders/Stats/Controller.php:333
-#: src/API/Reports/Orders/Controller.php:260
-#: src/API/Reports/Products/Stats/Controller.php:315
-#: src/API/Reports/Products/Controller.php:259
-#: src/API/Reports/Categories/Controller.php:222
 #: src/API/Reports/Revenue/Stats/Controller.php:360
+#: src/API/Reports/Categories/Controller.php:222
+#: src/API/Reports/Taxes/Controller.php:234
+#: src/API/Reports/Taxes/Stats/Controller.php:311
+#: src/API/Reports/Variations/Controller.php:261
+#: src/API/Reports/Stock/Controller.php:430
+#: src/API/Reports/Downloads/Controller.php:253
+#: src/API/Reports/Downloads/Stats/Controller.php:231
+#: src/API/Reports/Orders/Controller.php:260
+#: src/API/Reports/Orders/Stats/Controller.php:333
+#: src/API/Reports/Products/Controller.php:262
+#: src/API/Reports/Products/Stats/Controller.php:315
+#: src/API/Reports/Customers/Controller.php:354 src/API/Notes.php:343
 msgid "Current page of the collection."
 msgstr "Página actual de la colección."
 
@@ -3420,7 +3444,7 @@ msgstr "La fecha de la descarga, en la zona horaria del sitio."
 #: src/API/Reports/Variations/Controller.php:176
 #: src/API/Reports/Downloads/Controller.php:170
 #: src/API/Reports/Downloads/Controller.php:206
-#: src/API/Reports/Products/Controller.php:162
+#: src/API/Reports/Products/Controller.php:165
 msgid "Product ID."
 msgstr "ID del producto."
 
@@ -3428,128 +3452,128 @@ msgstr "ID del producto."
 msgid "ID."
 msgstr "ID."
 
-#: src/API/Reports/Customers/Stats/Controller.php:357
 #: src/API/Reports/Customers/Controller.php:555
+#: src/API/Reports/Customers/Stats/Controller.php:357
 msgid "Limit result to items with specified customer ids."
 msgstr "Limita el resultado a artículos con los IDs de cliente especificados."
 
-#: src/API/Reports/Customers/Stats/Controller.php:351
 #: src/API/Reports/Customers/Controller.php:549
+#: src/API/Reports/Customers/Stats/Controller.php:351
 msgid "Limit response to objects with last order after (or at) a given ISO8601 compliant datetime."
 msgstr "Limita la respuesta a los objetos con el último pedido después de (o en) una fecha y hora determinada conforme a ISO8601."
 
-#: src/API/Reports/Customers/Stats/Controller.php:345
 #: src/API/Reports/Customers/Controller.php:543
+#: src/API/Reports/Customers/Stats/Controller.php:345
 msgid "Limit response to objects with last order before (or at) a given ISO8601 compliant datetime."
 msgstr "Limita la respuesta a los objetos con el último pedido antes (o en) una determinada fecha y hora conforme a la norma ISO8601."
 
-#: src/API/Reports/Customers/Stats/Controller.php:340
 #: src/API/Reports/Customers/Controller.php:538
+#: src/API/Reports/Customers/Stats/Controller.php:340
 msgid "Limit response to objects with an average order spend between two given numbers."
 msgstr "Limita la respuesta a los objetos con un gasto medio de pedido entre dos números determinados."
 
-#: src/API/Reports/Customers/Stats/Controller.php:335
 #: src/API/Reports/Customers/Controller.php:533
+#: src/API/Reports/Customers/Stats/Controller.php:335
 msgid "Limit response to objects with an average order spend less than or equal to given number."
 msgstr "Limita la respuesta a los objetos con un gasto medio de pedido inferior o igual a un número determinado."
 
-#: src/API/Reports/Customers/Stats/Controller.php:330
 #: src/API/Reports/Customers/Controller.php:528
+#: src/API/Reports/Customers/Stats/Controller.php:330
 msgid "Limit response to objects with an average order spend greater than or equal to given number."
 msgstr "Limita la respuesta a los objetos con un gasto medio de pedido superior o igual a un número determinado."
 
-#: src/API/Reports/Customers/Stats/Controller.php:325
 #: src/API/Reports/Customers/Controller.php:523
+#: src/API/Reports/Customers/Stats/Controller.php:325
 msgid "Limit response to objects with a total order spend between two given numbers."
 msgstr "Limita la respuesta a objetos con un total de gasto de pedido entre dos números determinados."
 
-#: src/API/Reports/Customers/Stats/Controller.php:320
 #: src/API/Reports/Customers/Controller.php:518
+#: src/API/Reports/Customers/Stats/Controller.php:320
 msgid "Limit response to objects with a total order spend less than or equal to given number."
 msgstr "Limita la respuesta a los objetos con un total de gasto de pedido inferior o igual a un número determinado."
 
-#: src/API/Reports/Customers/Stats/Controller.php:315
 #: src/API/Reports/Customers/Controller.php:513
+#: src/API/Reports/Customers/Stats/Controller.php:315
 msgid "Limit response to objects with a total order spend greater than or equal to given number."
 msgstr "Limita la respuesta a los objetos con un total de gasto de pedido mayor o igual a un número determinado."
 
-#: src/API/Reports/Customers/Stats/Controller.php:310
 #: src/API/Reports/Customers/Controller.php:508
+#: src/API/Reports/Customers/Stats/Controller.php:310
 msgid "Limit response to objects with an order count between two given integers."
 msgstr "Limita la respuesta a objetos con una cuenta de pedidos entre dos números enteros dados."
 
-#: src/API/Reports/Customers/Stats/Controller.php:304
 #: src/API/Reports/Customers/Controller.php:502
+#: src/API/Reports/Customers/Stats/Controller.php:304
 msgid "Limit response to objects with an order count less than or equal to given integer."
 msgstr "Limita la respuesta a objetos con un número de pedidos menor o igual al número entero dado."
 
-#: src/API/Reports/Customers/Stats/Controller.php:298
 #: src/API/Reports/Customers/Controller.php:496
+#: src/API/Reports/Customers/Stats/Controller.php:298
 msgid "Limit response to objects with an order count greater than or equal to given integer."
 msgstr "Limita la respuesta a objetos con un número de pedidos mayor o igual al número entero dado."
 
-#: src/API/Reports/Customers/Stats/Controller.php:276
-#: src/API/Reports/Customers/Stats/Controller.php:293
 #: src/API/Reports/Customers/Controller.php:474
 #: src/API/Reports/Customers/Controller.php:491
+#: src/API/Reports/Customers/Stats/Controller.php:276
+#: src/API/Reports/Customers/Stats/Controller.php:293
 msgid "Limit response to objects last active between two given ISO8601 compliant datetime."
 msgstr "Limita la respuesta a los objetos activos por última vez entre dos fechas que conforme a la norma ISO8601."
 
-#: src/API/Reports/Customers/Stats/Controller.php:270
 #: src/API/Reports/Customers/Controller.php:468
+#: src/API/Reports/Customers/Stats/Controller.php:270
 msgid "Limit response to objects last active after (or at) a given ISO8601 compliant datetime."
 msgstr "Limita la respuesta a los objetos activos por última vez después de (o en) una fecha/hora determinada conforme a la norma ISO8601."
 
-#: src/API/Reports/Customers/Stats/Controller.php:264
 #: src/API/Reports/Customers/Controller.php:462
+#: src/API/Reports/Customers/Stats/Controller.php:264
 msgid "Limit response to objects last active before (or at) a given ISO8601 compliant datetime."
 msgstr "Limita la respuesta a los objetos activos por última vez antes de (o en) una fecha y hora determinada conforme a la norma ISO8601."
 
-#: src/API/Reports/Customers/Stats/Controller.php:254
 #: src/API/Reports/Customers/Controller.php:452
+#: src/API/Reports/Customers/Stats/Controller.php:254
 msgid "Limit response to objects with specfic countries."
 msgstr "Limita la respuesta a objetos con países específicos."
 
-#: src/API/Reports/Customers/Stats/Controller.php:239
 #: src/API/Reports/Customers/Controller.php:437
+#: src/API/Reports/Customers/Stats/Controller.php:239
 msgid "Limit response to objects excluding specfic usernames."
 msgstr "Limita la respuesta a los objetos excluyendo nombres de usuario específicos."
 
-#: src/API/Reports/Customers/Stats/Controller.php:209
 #: src/API/Reports/Customers/Controller.php:407
+#: src/API/Reports/Customers/Stats/Controller.php:209
 msgid "Limit response to objects with a customer field containing the search term. Searches the field provided by `searchby`."
 msgstr "Limitar la respuesta a objetos con un campo de cliente que contenga el concepto de búsqueda. Busca en el campo proporcionado por «searchby»."
 
-#: src/API/Reports/Customers/Stats/Controller.php:199
-#: src/API/Reports/Customers/Controller.php:397
 #: src/API/Reports/Downloads/Stats/Controller.php:291
 #: src/API/Reports/Orders/Stats/Controller.php:395
-#: src/API/Reports/Products/Controller.php:319
+#: src/API/Reports/Products/Controller.php:322
+#: src/API/Reports/Customers/Controller.php:397
+#: src/API/Reports/Customers/Stats/Controller.php:199
 msgid "Indicates whether all the conditions should be true for the resulting set, or if any one of them is sufficient. Match affects the following parameters: status_is, status_is_not, product_includes, product_excludes, coupon_includes, coupon_excludes, customer, categories"
 msgstr "Indica si todas las condiciones deben ser ciertas para el conjunto resultante, o si alguna de ellas es suficiente. La coincidencia afecta a los siguientes parámetros: status_is, status_is_not, product_includes, product_excludes, coupon_includes, coupon_excludes, customer, categories"
 
-#: src/API/Reports/Customers/Stats/Controller.php:193
-#: src/API/Reports/Customers/Stats/Controller.php:287
 #: src/API/Reports/Customers/Controller.php:336
 #: src/API/Reports/Customers/Controller.php:485
+#: src/API/Reports/Customers/Stats/Controller.php:193
+#: src/API/Reports/Customers/Stats/Controller.php:287
 msgid "Limit response to objects registered after (or at) a given ISO8601 compliant datetime."
 msgstr "Limita la respuesta a los objetos registrados después de (o en) una fecha y hora determinada conforme a la norma ISO8601."
 
-#: src/API/Reports/Customers/Stats/Controller.php:187
-#: src/API/Reports/Customers/Stats/Controller.php:281
 #: src/API/Reports/Customers/Controller.php:330
 #: src/API/Reports/Customers/Controller.php:479
+#: src/API/Reports/Customers/Stats/Controller.php:187
+#: src/API/Reports/Customers/Stats/Controller.php:281
 msgid "Limit response to objects registered before (or at) a given ISO8601 compliant datetime."
 msgstr "Limita la respuesta a los objetos registrados antes (o en) una determinada fecha y hora que cumpla con la norma ISO8601."
 
-#: src/API/Reports/Customers/Stats/Controller.php:166
-#: src/API/Reports/Taxes/Stats/Controller.php:241
 #: src/API/Reports/Coupons/Stats/Controller.php:204
+#: src/API/Reports/Revenue/Stats/Controller.php:290
+#: src/API/Reports/Taxes/Stats/Controller.php:241
 #: src/API/Reports/Stock/Stats/Controller.php:118
 #: src/API/Reports/Downloads/Stats/Controller.php:161
 #: src/API/Reports/Orders/Stats/Controller.php:263
 #: src/API/Reports/Products/Stats/Controller.php:224
-#: src/API/Reports/Revenue/Stats/Controller.php:290
+#: src/API/Reports/Customers/Stats/Controller.php:166
 msgid "Totals data."
 msgstr "Datos totales."
 
@@ -3612,7 +3636,7 @@ msgstr "¿Estás buscando el ajuste de aviso en la tienda?"
 
 #: src/Notes/WC_Admin_Notes_Historical_Data.php:76
 msgid "Get Started"
-msgstr "Iniciar"
+msgstr "Primeros pasos"
 
 #: src/Notes/WC_Admin_Notes_Historical_Data.php:67
 msgid "To view your historical analytics data, you must process your existing orders and customers."
@@ -3709,7 +3733,7 @@ msgid "%s subscription expiring soon"
 msgstr "%s suscripción caducará pronto"
 
 #: src/Notes/WC_Admin_Notes_Woo_Subscriptions_Notes.php:193
-#: src/Features/Onboarding.php:851 src/Features/Onboarding.php:855
+#: src/Features/Onboarding.php:856 src/Features/Onboarding.php:860
 #: dist/app/index.js:27
 msgid "Connect"
 msgstr "Conectar"
@@ -4207,7 +4231,7 @@ msgstr "selecciona un rango de fechas"
 msgid "Select date range and comparison"
 msgstr "Selecciona un rango de fechas a comparar"
 
-#: dist/components/index.js:34 dist/app/index.js:27
+#: dist/app/index.js:27 dist/components/index.js:34
 msgid "Update"
 msgstr "Actualizar"
 
@@ -4235,7 +4259,7 @@ msgstr "%(field)s inicio del rango"
 msgid "Any"
 msgstr "Cualquiera"
 
-#: dist/components/index.js:34 dist/app/index.js:27
+#: dist/app/index.js:27 dist/components/index.js:34
 msgid "All"
 msgstr "Todos"
 
@@ -4255,7 +4279,7 @@ msgstr "Añade un filtro"
 msgid "Choose to apply any or all filters"
 msgstr "Elige si aplicar alguno o todos los filtros"
 
-#: dist/date/index.js:1 dist/components/index.js:34 dist/app/index.js:27
+#: dist/date/index.js:1 dist/app/index.js:27 dist/components/index.js:34
 msgid "MM/DD/YYYY"
 msgstr "DD/MM/YYYY"
 
@@ -4452,10 +4476,6 @@ msgid "%1$s &lsaquo; %2$s &#8212; WooCommerce"
 msgstr "%1$s &lsaquo; %2$s &#8212; WooCommerce"
 
 #: dist/app/index.js:27
-msgid "Notices"
-msgstr "Avisos"
-
-#: dist/app/index.js:27
 msgid "Verified customer"
 msgstr "Cliente verificado"
 
@@ -4561,27 +4581,27 @@ msgstr "Filas por tabla"
 msgid "Dashboard"
 msgstr "Escritorio"
 
-#: dist/components/index.js:34 dist/app/index.js:27
+#: dist/app/index.js:27 dist/components/index.js:34
 msgid "By year"
 msgstr "Por año"
 
-#: dist/components/index.js:34 dist/app/index.js:27
+#: dist/app/index.js:27 dist/components/index.js:34
 msgid "By quarter"
 msgstr "Por trimestre"
 
-#: dist/components/index.js:34 dist/app/index.js:27
+#: dist/app/index.js:27 dist/components/index.js:34
 msgid "By month"
 msgstr "Por mes"
 
-#: dist/components/index.js:34 dist/app/index.js:27
+#: dist/app/index.js:27 dist/components/index.js:34
 msgid "By week"
 msgstr "Por semana"
 
-#: dist/components/index.js:34 dist/app/index.js:27
+#: dist/app/index.js:27 dist/components/index.js:34
 msgid "By day"
 msgstr "Por día"
 
-#: dist/components/index.js:34 dist/app/index.js:27
+#: dist/app/index.js:27 dist/components/index.js:34
 msgid "By hour"
 msgstr "Por hora"
 
@@ -4589,11 +4609,11 @@ msgstr "Por hora"
 msgid "Choose which charts to display"
 msgstr "Elige qué gráficos mostrar"
 
-#: dist/components/index.js:34 dist/app/index.js:27
+#: dist/app/index.js:27 dist/components/index.js:34
 msgid "Bar chart"
 msgstr "Gráfico de barras"
 
-#: dist/components/index.js:34 dist/app/index.js:27
+#: dist/app/index.js:27 dist/components/index.js:34
 msgid "Line chart"
 msgstr "Gráfico de líneas"
 
@@ -4625,7 +4645,7 @@ msgstr "Restablecer a valores por defecto"
 msgid "Analytics Settings"
 msgstr "Ajustes de análisis"
 
-#: includes/connect-existing-pages.php:33 src/Features/Analytics.php:142
+#: src/Features/Analytics.php:142 includes/connect-existing-pages.php:33
 #: dist/app/index.js:27
 msgid "Settings"
 msgstr "Ajustes"
@@ -4654,7 +4674,7 @@ msgstr "Estados personalizados"
 msgid "Actionable Statuses:"
 msgstr "Estados que requieren acción:"
 
-#: dist/components/index.js:34 dist/app/index.js:27
+#: dist/app/index.js:27 dist/components/index.js:34
 msgid "TAX"
 msgstr "IMPUESTO"
 
@@ -4779,7 +4799,7 @@ msgstr "Buscar por nombre de producto o SKU"
 
 #: src/API/Reports/Variations/Controller.php:358
 #: src/API/Reports/Stock/Controller.php:528
-#: src/API/Reports/Products/Controller.php:387 dist/app/index.js:27
+#: src/API/Reports/Products/Controller.php:390 dist/app/index.js:27
 msgid "SKU"
 msgstr "SKU"
 
@@ -4787,7 +4807,7 @@ msgstr "SKU"
 msgid "Product / Variation Title"
 msgstr "Producto / Título de la variación"
 
-#: src/API/Reports/Products/Controller.php:392 dist/app/index.js:27
+#: src/API/Reports/Products/Controller.php:395 dist/app/index.js:27
 msgid "Variations"
 msgstr "Variaciones"
 
@@ -4829,7 +4849,7 @@ msgstr "Selecciona al menos dos de los productos siguientes para compararlos "
 
 #: dist/app/index.js:27
 msgid "Single Product"
-msgstr "Producto único"
+msgstr "Producto individual"
 
 #: dist/app/index.js:27
 msgid "Type to search for a product"
@@ -4853,7 +4873,7 @@ msgstr "Selecciona a menos dos variaciones de las siguientes para compararlas"
 
 #: src/API/Reports/Variations/Controller.php:360
 #: src/API/Reports/Orders/Controller.php:484
-#: src/API/Reports/Products/Controller.php:389
+#: src/API/Reports/Products/Controller.php:392
 msgid "N. Revenue"
 msgstr "Ingresos netos"
 
@@ -4869,11 +4889,11 @@ msgstr "Producto(s)"
 msgid "Customer"
 msgstr "Cliente"
 
-#: includes/connect-existing-pages.php:37
 #: src/API/Reports/Variations/Controller.php:365
 #: src/API/Reports/Stock/Controller.php:529
 #: src/API/Reports/Orders/Controller.php:479
-#: src/API/Reports/Products/Controller.php:396 dist/app/index.js:27
+#: src/API/Reports/Products/Controller.php:399
+#: includes/connect-existing-pages.php:37 dist/app/index.js:27
 msgid "Status"
 msgstr "Estado"
 
@@ -4991,20 +5011,19 @@ msgstr "Buscar cupones"
 msgid "Coupon Codes"
 msgstr "Códigos de cupón"
 
-#: src/API/Reports/Variations/Controller.php:366
+#: src/ReportCSVEmail.php:41 src/API/Reports/Variations/Controller.php:366
 #: src/API/Reports/Stock/Controller.php:530
-#: src/API/Reports/Products/Controller.php:397 src/Features/Analytics.php:130
-#: src/ReportCSVEmail.php:41 dist/app/index.js:27
+#: src/API/Reports/Products/Controller.php:400 src/Features/Analytics.php:130
+#: dist/app/index.js:27
 msgid "Stock"
 msgstr "Inventario"
 
-#: src/API/Reports/Revenue/Stats/Controller.php:455
-#: src/Features/Analytics.php:118 src/ReportCSVEmail.php:39
-#: dist/app/index.js:27
+#: src/ReportCSVEmail.php:39 src/API/Reports/Revenue/Stats/Controller.php:455
+#: src/Features/Analytics.php:118 dist/app/index.js:27
 msgid "Taxes"
 msgstr "Impuestos"
 
-#: src/Features/Analytics.php:88 src/ReportCSVEmail.php:34 dist/app/index.js:27
+#: src/ReportCSVEmail.php:34 src/Features/Analytics.php:88 dist/app/index.js:27
 msgid "Revenue"
 msgstr "Ingresos"
 
@@ -5030,13 +5049,13 @@ msgid "File Name"
 msgstr "Nombre de archivo"
 
 #: src/API/Reports/Downloads/Controller.php:393
-#: src/API/Reports/Products/Controller.php:386 dist/app/index.js:27
+#: src/API/Reports/Products/Controller.php:389 dist/app/index.js:27
 msgid "Product Title"
 msgstr "Título del producto"
 
+#: src/API/Reports/Revenue/Stats/Controller.php:450
 #: src/API/Reports/Downloads/Controller.php:392
-#: src/API/Reports/Orders/Controller.php:477
-#: src/API/Reports/Revenue/Stats/Controller.php:450 dist/app/index.js:27
+#: src/API/Reports/Orders/Controller.php:477 dist/app/index.js:27
 msgid "Date"
 msgstr "Fecha"
 
@@ -5080,9 +5099,9 @@ msgstr "Producto"
 msgid "All Downloads"
 msgstr "Todas las descargas"
 
-#: src/API/Reports/Downloads/Stats/Controller.php:146
+#: src/ReportCSVEmail.php:40 src/API/Reports/Downloads/Stats/Controller.php:146
 #: src/Features/Analytics.php:124 src/Features/Onboarding.php:246
-#: src/ReportCSVEmail.php:40 dist/app/index.js:27
+#: dist/app/index.js:27
 msgid "Downloads"
 msgstr "Descargas"
 
@@ -5150,7 +5169,7 @@ msgstr "Registro"
 msgid "Last Active"
 msgstr "Última actividad"
 
-#: src/Features/Analytics.php:136 src/ReportCSVEmail.php:42
+#: src/ReportCSVEmail.php:42 src/Features/Analytics.php:136
 #: dist/app/index.js:27
 msgid "Customers"
 msgstr "Clientes"
@@ -5180,28 +5199,12 @@ msgstr[0] "cliente"
 msgstr[1] "clientes"
 
 #: dist/app/index.js:27
-msgid "Select country"
-msgstr "Seleccionar país"
-
-#: dist/app/index.js:27
-msgid "{{title}}Country{{/title}} {{rule /}} {{filter /}}"
-msgstr "{{title}}País{{/title}} {{rule /}} {{filter /}}"
-
-#: dist/app/index.js:27
-msgid "Select a country filter match"
-msgstr "Selecciona una coincidencia de filtro de país"
-
-#: dist/app/index.js:27
-msgid "Remove country filter"
-msgstr "Quita el filtro de país"
+msgid "{{title}}Country / Region{{/title}} {{rule /}} {{filter /}}"
+msgstr "{{title}}País / Región{{/title}} {{rule /}} {{filter /}}"
 
 #: dist/app/index.js:27
 msgid "Search"
 msgstr "Buscar"
-
-#: src/API/Reports/Customers/Controller.php:582 dist/app/index.js:27
-msgid "Country"
-msgstr "País"
 
 #: dist/app/index.js:27
 msgid "Select customer name"
@@ -5394,9 +5397,8 @@ msgstr "Cantidad descontada"
 msgid "Coupon Code"
 msgstr "Código de cupón"
 
-#: includes/connect-existing-pages.php:151
-#: src/API/Reports/Revenue/Stats/Controller.php:454
-#: src/Features/Analytics.php:112 src/ReportCSVEmail.php:38
+#: src/ReportCSVEmail.php:38 src/API/Reports/Revenue/Stats/Controller.php:454
+#: src/Features/Analytics.php:112 includes/connect-existing-pages.php:151
 #: dist/app/index.js:27
 msgid "Coupons"
 msgstr "Cupones"
@@ -5424,9 +5426,9 @@ msgstr[0] "cupón"
 msgstr[1] "cupones"
 
 #: src/API/Reports/Coupons/Controller.php:319
-#: src/API/Reports/Products/Controller.php:425
-#: src/API/Reports/Products/Controller.php:426 dist/components/index.js:34
-#: dist/app/index.js:27
+#: src/API/Reports/Products/Controller.php:428
+#: src/API/Reports/Products/Controller.php:429 dist/app/index.js:27
+#: dist/components/index.js:34
 msgid "N/A"
 msgstr "N/D"
 
@@ -5462,31 +5464,31 @@ msgstr "Cantidad"
 msgid "Discounted Orders"
 msgstr "Pedidos con descuento"
 
-#: includes/connect-existing-pages.php:121 src/API/Leaderboards.php:128
-#: src/API/Leaderboards.php:258 src/API/Reports/Variations/Controller.php:361
-#: src/API/Reports/Customers/Controller.php:579
-#: src/API/Reports/Taxes/Controller.php:310
-#: src/API/Reports/Coupons/Controller.php:303
-#: src/API/Reports/Orders/Stats/Controller.php:164
-#: src/API/Reports/Products/Controller.php:390
-#: src/API/Reports/Categories/Controller.php:336
+#: src/ReportCSVEmail.php:35 src/API/Leaderboards.php:128
+#: src/API/Leaderboards.php:258 src/API/Reports/Coupons/Controller.php:303
 #: src/API/Reports/Revenue/Stats/Controller.php:451
-#: src/Features/Analytics.php:94 src/ReportCSVEmail.php:35 dist/app/index.js:27
+#: src/API/Reports/Categories/Controller.php:336
+#: src/API/Reports/Taxes/Controller.php:310
+#: src/API/Reports/Variations/Controller.php:361
+#: src/API/Reports/Orders/Stats/Controller.php:164
+#: src/API/Reports/Products/Controller.php:393
+#: src/API/Reports/Customers/Controller.php:579 src/Features/Analytics.php:94
+#: includes/connect-existing-pages.php:121 dist/app/index.js:27
 msgid "Orders"
 msgstr "Pedidos"
 
-#: includes/connect-existing-pages.php:181
-#: src/API/Reports/Categories/Controller.php:335 src/Features/Analytics.php:100
-#: src/ReportCSVEmail.php:36 dist/app/index.js:27
+#: src/ReportCSVEmail.php:36 src/API/Reports/Categories/Controller.php:335
+#: src/Features/Analytics.php:100 includes/connect-existing-pages.php:181
+#: dist/app/index.js:27
 msgid "Products"
 msgstr "Productos"
 
-#: src/API/Leaderboards.php:191 src/API/Reports/Products/Controller.php:391
-#: src/API/Reports/Categories/Controller.php:332 dist/app/index.js:27
+#: src/API/Leaderboards.php:191 src/API/Reports/Categories/Controller.php:332
+#: src/API/Reports/Products/Controller.php:394 dist/app/index.js:27
 msgid "Category"
 msgstr "Categoría"
 
-#: src/Features/Analytics.php:106 src/ReportCSVEmail.php:37
+#: src/ReportCSVEmail.php:37 src/Features/Analytics.php:106
 #: dist/app/index.js:27
 msgid "Categories"
 msgstr "Categorías"
@@ -5557,17 +5559,17 @@ msgstr "Todas las categorías"
 msgid "Show"
 msgstr "Mostrar"
 
-#: src/API/Reports/Categories/Controller.php:334
 #: src/API/Reports/Revenue/Stats/Controller.php:457
+#: src/API/Reports/Categories/Controller.php:334
 msgid "Net Revenue"
 msgstr "Ingresos netos"
 
 #: src/API/Leaderboards.php:194 src/API/Leaderboards.php:324
+#: src/API/Reports/Categories/Controller.php:333
 #: src/API/Reports/Variations/Controller.php:359
 #: src/API/Reports/Orders/Controller.php:482
-#: src/API/Reports/Products/Stats/Controller.php:160
-#: src/API/Reports/Products/Controller.php:388
-#: src/API/Reports/Categories/Controller.php:333 dist/app/index.js:27
+#: src/API/Reports/Products/Controller.php:391
+#: src/API/Reports/Products/Stats/Controller.php:160 dist/app/index.js:27
 msgid "Items Sold"
 msgstr "Artículos vendidos"
 
@@ -5579,7 +5581,7 @@ msgstr "Análisis"
 msgid "Previous Year:"
 msgstr "Año anterior:"
 
-#: dist/components/index.js:34 dist/app/index.js:27
+#: dist/app/index.js:27 dist/components/index.js:34
 msgid "Previous Period:"
 msgstr "Periodo anterior:"
 
@@ -5612,17 +5614,17 @@ msgid "No data recorded for the selected time period."
 msgstr "No hay datos almacenados del periodo de tiempo seleccionado."
 
 #. translators: 1: URL of GitHub Repository build page
-#: src/FeaturePlugin.php:294
+#: src/FeaturePlugin.php:277
 msgid "Or you can download a pre-built version of the plugin by visiting <a href=\"%1$s\">the releases page in the repository</a>."
 msgstr "O puedes descargar una versión previa del plugin visitando <a href=\"%1$s\">la página de versiones en el repositorio</a>."
 
-#: src/FeaturePlugin.php:291
+#: src/FeaturePlugin.php:274
 msgid "You have installed a development version of WooCommerce Admin which requires files to be built. From the plugin directory, run <code>npm install</code> to install dependencies, <code>npm run build</code> to build the files."
 msgstr "Has instalado  una versión de desarrollo de WooCommerce Admin que requiere crear una serie de archivos. Desde el directorio de plugins, ejecuta <code>npm install</code> para instalar depencencias, y <code>npm run build</code> para crear los archivos."
 
 #. translators: 1: URL of WordPress.org, 2: The minimum WordPress version
 #. number
-#: src/FeaturePlugin.php:243
+#: src/FeaturePlugin.php:226
 msgid "The WooCommerce Admin feature plugin requires <a href=\"%1$s\">WordPress</a> %2$s or greater to be installed and active."
 msgstr "El destacado plugin WooCommerce Admin necesita <a href=\"%1$s\">WordPress</a> %2$s o superior para poder ser instalado y activado."
 

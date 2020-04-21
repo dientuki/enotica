@@ -1,10 +1,9 @@
 .menu {
   &-user {
     &__wrapper {
-      display: flex;
-      flex-direction: row;
-      align-self: center;
-      height: rem(100);
+      position: absolute;
+      right: rem(47);
+      top: rem(97)
     }
 
     &__item {

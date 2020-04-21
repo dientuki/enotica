@@ -1,19 +1,16 @@
 .header {
   &__logo {
-    display: flex;
-    flex-direction: row;
+    position: absolute;	
+    left: rem(57);
     width: rem(476);
     height: rem(112);
     background: no-repeat center center url("../images/logo-big.png");
     @include notext();
+    @include center("v");
   }
 
   &__top {
-    display: flex;
-    flex-wrap: wrap;
     height: rem(235);
-    justify-content: space-between;
-    padding: rem(60) rem(30) rem(30) rem(40);
   }
 
   &__nav {

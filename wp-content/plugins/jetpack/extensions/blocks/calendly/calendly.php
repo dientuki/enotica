@@ -7,7 +7,9 @@
  * @package Jetpack
  */
 
-namespace Jetpack\Calendly_Block;
+namespace Automattic\Jetpack\Extensions\Calendly;
+
+use Jetpack_Gutenberg;
 
 const FEATURE_NAME = 'calendly';
 const BLOCK_NAME   = 'jetpack/' . FEATURE_NAME;
@@ -44,11 +46,11 @@ function register_block() {
 	if ( is_available() ) {
 		jetpack_register_block(
 			BLOCK_NAME,
-			array( 'render_callback' => 'Jetpack\Calendly_Block\load_assets' )
+			array( 'render_callback' => __NAMESPACE__ . '\load_assets' )
 		);
 	}
 }
-add_action( 'init', 'Jetpack\Calendly_Block\register_block' );
+add_action( 'init', __NAMESPACE__ . '\register_block' );
 
 /**
  * Set the availability of the block as the editor
@@ -56,9 +58,9 @@ add_action( 'init', 'Jetpack\Calendly_Block\register_block' );
  */
 function set_availability() {
 	if ( is_available() ) {
-		\Jetpack_Gutenberg::set_extension_available( BLOCK_NAME );
+		Jetpack_Gutenberg::set_extension_available( BLOCK_NAME );
 	} else {
-		\Jetpack_Gutenberg::set_extension_unavailable(
+		Jetpack_Gutenberg::set_extension_unavailable(
 			BLOCK_NAME,
 			'missing_plan',
 			array(
@@ -68,7 +70,7 @@ function set_availability() {
 		);
 	}
 }
-add_action( 'init', 'Jetpack\Calendly_Block\set_availability' );
+add_action( 'init', __NAMESPACE__ . '\set_availability' );
 
 /**
  * Calendly block registration/dependency declaration.
@@ -79,7 +81,13 @@ add_action( 'init', 'Jetpack\Calendly_Block\set_availability' );
  * @return string
  */
 function load_assets( $attr, $content ) {
-	$url = get_attribute( $attr, 'url' );
+	if ( is_admin() ) {
+		return;
+	}
+	$url = Jetpack_Gutenberg::validate_block_embed_url(
+		get_attribute( $attr, 'url' ),
+		array( 'calendly.com' )
+	);
 	if ( empty( $url ) ) {
 		return;
 	}
@@ -87,13 +95,13 @@ function load_assets( $attr, $content ) {
 	/*
 	 * Enqueue necessary scripts and styles.
 	 */
-	\Jetpack_Gutenberg::load_assets_as_required( 'calendly' );
+	Jetpack_Gutenberg::load_assets_as_required( FEATURE_NAME );
 	wp_enqueue_script(
 		'jetpack-calendly-external-js',
 		'https://assets.calendly.com/assets/external/widget.js',
 		null,
 		JETPACK__VERSION,
-		false
+		true
 	);
 
 	$style                          = get_attribute( $attr, 'style' );
@@ -102,9 +110,10 @@ function load_assets( $attr, $content ) {
 	$text_color                     = get_attribute( $attr, 'textColor' );
 	$primary_color                  = get_attribute( $attr, 'primaryColor' );
 	$submit_button_text             = get_attribute( $attr, 'submitButtonText' );
+	$submit_button_classes          = get_attribute( $attr, 'submitButtonClasses' );
 	$submit_button_text_color       = get_attribute( $attr, 'customTextButtonColor' );
 	$submit_button_background_color = get_attribute( $attr, 'customBackgroundButtonColor' );
-	$classes                        = \Jetpack_Gutenberg::block_classes( 'calendly', $attr );
+	$classes                        = Jetpack_Gutenberg::block_classes( FEATURE_NAME, $attr, array( 'calendly-style-' . $style ) );
 	$block_id                       = wp_unique_id( 'calendly-block-' );
 
 	$url = add_query_arg(
@@ -140,18 +149,27 @@ function load_assets( $attr, $content ) {
 		}
 
 		$content = sprintf(
-			'<div class="%1$s" id="%2$s"><a class="wp-block-button__link" role="button" onclick="Calendly.initPopupWidget({url:\'%3$s\'});return false;">%4$s</a></div>',
+			'<div class="wp-block-button %1$s" id="%2$s"><a class="%3$s" role="button" onclick="Calendly.initPopupWidget({url:\'%4$s\'});return false;">%5$s</a></div>',
 			esc_attr( $classes ),
 			esc_attr( $block_id ),
+			! empty( $submit_button_classes ) ? esc_attr( $submit_button_classes ) : 'wp-block-button__link',
 			esc_js( $url ),
 			wp_kses_post( $submit_button_text )
 		);
 	} else { // Inline style.
 		$content = sprintf(
-			'<div class="calendly-inline-widget %1$s" data-url="%2$s" style="min-width:320px;height:630px;"></div>',
+			'<div class="%1$s" id="%2$s"></div>',
 			esc_attr( $classes ),
-			esc_url( $url )
+			esc_attr( $block_id )
 		);
+		$script  = <<<JS_END
+Calendly.initInlineWidget({
+	url: '%s',
+	parentElement: document.getElementById('%s'),
+	inlineStyles: false,
+});
+JS_END;
+		wp_add_inline_script( 'jetpack-calendly-external-js', sprintf( $script, esc_url( $url ), esc_js( $block_id ) ) );
 	}
 
 	return $content;

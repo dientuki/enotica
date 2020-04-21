@@ -71,6 +71,8 @@ abstract class SAL_Site {
 
 	abstract public function is_private();
 
+	abstract public function is_coming_soon();
+
 	abstract public function is_following();
 
 	abstract public function get_subscribers_count();
@@ -651,8 +653,8 @@ abstract class SAL_Site {
 		return false;
 	}
 
-	function get_migration_status() {
-		return false;
+	function get_migration_meta() {
+		return null;
 	}
 
 	function get_site_segment() {

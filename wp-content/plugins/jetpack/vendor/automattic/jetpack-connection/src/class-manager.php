@@ -720,6 +720,21 @@ class Manager {
 		$version  = '/' . Utils::get_jetpack_api_version() . '/';
 
 		/**
+		 * Filters whether the connection manager should use the iframe authorization
+		 * flow instead of the regular redirect-based flow.
+		 *
+		 * @since 8.3.0
+		 *
+		 * @param Boolean $is_iframe_flow_used should the iframe flow be used, defaults to false.
+		 */
+		$iframe_flow = apply_filters( 'jetpack_use_iframe_authorization_flow', false );
+
+		// Do not modify anything that is not related to authorize requests.
+		if ( 'authorize' === $relative_url && $iframe_flow ) {
+			$relative_url = 'authorize_iframe';
+		}
+
+		/**
 		 * Filters the API URL that Jetpack uses for server communication.
 		 *
 		 * @since 8.0.0
@@ -1169,10 +1184,21 @@ class Manager {
 			 *
 			 * @param Callable a function or method that returns a secret string.
 			 */
-			$this->secret_callable = apply_filters( 'jetpack_connection_secret_generator', 'wp_generate_password' );
+			$this->secret_callable = apply_filters( 'jetpack_connection_secret_generator', array( $this, 'secret_callable_method' ) );
 		}
 
 		return $this->secret_callable;
+	}
+
+	/**
+	 * Runs the wp_generate_password function with the required parameters. This is the
+	 * default implementation of the secret callable, can be overridden using the
+	 * jetpack_connection_secret_generator filter.
+	 *
+	 * @return String $secret value.
+	 */
+	private function secret_callable_method() {
+		return wp_generate_password( 32, false );
 	}
 
 	/**
@@ -1780,6 +1806,12 @@ class Manager {
 		 * @param array $data The request data.
 		 */
 		do_action( 'jetpack_authorize_ending_authorized', $data );
+
+		\Jetpack_Options::delete_raw_option( 'jetpack_last_connect_url_check' );
+
+		// Start nonce cleaner.
+		wp_clear_scheduled_hook( 'jetpack_clean_nonces' );
+		wp_schedule_event( time(), 'hourly', 'jetpack_clean_nonces' );
 
 		return 'authorized';
 	}

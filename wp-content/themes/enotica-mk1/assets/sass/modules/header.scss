@@ -17,11 +17,35 @@
 
   &__top {
     height: rem(235);
+    position: relative;
   }
 
   &__nav {
     height: rem(65);
     background: map-get($colors, "maroon");
+  }
+
+  &-menu-action {
+    @include hide();
+  }
+}
+
+@media (max-width: rem(1439)) {
+  .header-menu-action {
+    display: block;
+    visibility: visible;
+    border-radius: 10rem;
+    background: map-get($colors, "maroon") center center no-repeat;
+    position: relative;
+    @include box(45);
+
+    .icon-menu {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      width: 70%;
+    }
   }
 }
 

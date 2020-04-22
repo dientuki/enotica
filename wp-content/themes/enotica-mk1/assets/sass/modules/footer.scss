@@ -67,7 +67,7 @@
 
     &__logo {
       top: 0;
-      @include center('h');
+      @include center("h");
     }
 
     .item_logo {

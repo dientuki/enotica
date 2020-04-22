@@ -1,12 +1,18 @@
 .header {
-  &__logo {
+  &__logo_wrapper {
     position: absolute;
     left: rem(57);
+    @include center("v");
+    height: rem(112);  
+  }
+
+  &__logo {
+    display: block;
     width: rem(476);
     height: rem(112);
     background: no-repeat center center url("../images/logo-big.png");
     @include notext();
-    @include center("v");
+    background-size: 100%;
   }
 
   &__top {
@@ -19,6 +25,49 @@
   }
 }
 
+@media (max-width: rem(1000)) {
+  .header {
+    &__top {
+      height: auto
+    }
+
+    &__logo_wrapper {
+      position: relative;
+      left: 0;
+      top: 0;
+      transform: none;
+      margin-top: rem(15);
+    }
+
+    &__logo {
+      position: absolute;
+      @include center("h");
+    }
+
+  }
+}
+
+@media (max-width: rem(768)) {
+  .header {
+    &__logo_wrapper {
+      height: rem(80);
+    }
+
+    &__logo {
+      height: rem(80);
+      width: rem(340);
+    }
+  }
+}
+
+@media (max-width: rem(1440)) {
+  .header__nav {
+    @include hide();
+  }
+}
+
+
+/*
 @media (max-width: rem(880)) {
   .header {
     &__top {
@@ -64,3 +113,4 @@
     font-size: rem(28) !important;
   }
 }
+*/

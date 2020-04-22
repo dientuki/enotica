@@ -21,7 +21,9 @@
   
     <header class="header">
       <div class="header__top wrapper">
-        <a class="header__logo" href="<?php echo get_home_url(); ?>">Enotica</a>
+        <div class="header__logo_wrapper">
+          <a class="header__logo" href="<?php echo get_home_url(); ?>">Enotica</a>
+        </div>
       
         <?php wp_nav_menu( array(
           'container_class' => 'menu-user__wrapper',

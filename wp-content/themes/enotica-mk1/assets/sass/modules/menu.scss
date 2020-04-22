@@ -269,6 +269,25 @@
   }
 }
 
+@media (max-width: rem(1000)) {
+  .menu {
+    &-user {
+      position: absolute;
+      @include center("h");
+      width: rem(321);
+
+      &__wrapper {
+        position: relative;
+        margin: rem(20) 0;
+        right: 0;
+        top: 0;
+        height: rem(90);
+      }
+    }
+  }
+}
+
+/*
 @media (max-width: rem(630)) {
   .menu-user__wrapper {
     width: 100%;
@@ -279,3 +298,4 @@
     }
   }
 }
+*/

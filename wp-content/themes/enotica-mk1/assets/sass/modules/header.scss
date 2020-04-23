@@ -87,6 +87,6 @@
 
 @media (max-width: rem(1440)) {
   .header__nav {
-    
+    @include hide();
   }
 }

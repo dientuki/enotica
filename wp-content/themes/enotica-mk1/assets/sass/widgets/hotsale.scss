@@ -25,3 +25,13 @@
     padding: rem(60) 0;
   }
 }
+
+@media (max-width: rem(890)) {
+  .widget-hotsale {
+    .container-products {
+      .product {
+        width: 100%;
+      }
+    }
+  }
+}

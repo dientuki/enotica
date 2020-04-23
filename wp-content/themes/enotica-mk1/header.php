@@ -26,8 +26,9 @@
             <a class="header__logo" href="<?php echo get_home_url(); ?>">Enotica</a>
         </div>
       
-        <div class='menu-user__wrapper'>
+        <div class='menu-user__wrapper clearfix'>
           <?php wp_nav_menu( array(
+            'container_class' => 'menu-user-container clearfix',
             'menu_class' => 'menu-user',
             'theme_location'=>'cart'
           )); ?>

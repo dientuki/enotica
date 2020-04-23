@@ -41,30 +41,30 @@ main .woocommerce {
   .product {
     width: rem(250);
     height: rem(336);
-    padding-bottom: 32%; /* Same as width, sets height */
-    margin-bottom: 2%; /* (100-32*3)/2 */
+    //padding-bottom: 32%; /* Same as width, sets height */
+    margin-bottom: rem(16); /* (100-32*3)/2 */
     position: relative;
-
-    .button {
-      color: map-get($colors, "white");
-      font-size: rem(18);
-      background-color: map-get($colors, "maroon");
-      display: flex;
-      padding-left: rem(39);
-      text-transform: uppercase;
-      border-radius: rem(10);
-      align-items: center;
-    }
-
-    .price {
-      color: #8B2131;
-      display: flex;
-      justify-content: center;
-      padding: rem(10);
-      font-size: rem(20);
-      font-weight: bold;
-    }
   }
+
+  .button {
+    color: map-get($colors, "white");
+    font-size: rem(18);
+    background-color: map-get($colors, "maroon");
+    display: flex;
+    padding-left: rem(39);
+    text-transform: uppercase;
+    border-radius: rem(10);
+    align-items: center;
+  }
+
+  .price {
+    color: #8B2131;
+    display: flex;
+    justify-content: center;
+    padding: rem(10);
+    font-size: rem(20);
+    font-weight: bold;
+  }  
 }
 
 .icon-cart-button {

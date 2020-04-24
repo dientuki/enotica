@@ -31,6 +31,16 @@
 }
 
 @media (max-width: rem(1439)) {
+  .header__nav {
+    @include hide();
+
+    &.active {
+      display: block;
+      visibility: visible;
+      height: 100%;
+    }
+  }
+
   .header-menu-action {
     display: block;
     visibility: visible;
@@ -47,6 +57,22 @@
       top: 50%;
       transform: translateY(-50%) translateX(-50%);
       width: 70%;
+    }
+
+    &.active {
+      .ico-menu-top {
+        transform: rotate(45deg) translateY(.49rem);
+        transform-origin: center;
+      }
+
+      .ico-menu-middle {
+        @include hide();
+      }
+
+      .ico-menu-bottom {
+        transform: rotate(-45deg) translateY(-.49rem);
+        transform-origin: center;
+      }      
     }
   }
 }
@@ -87,6 +113,9 @@
 
 @media (max-width: rem(1440)) {
   .header__nav {
-    @include hide();
+    
+    .wrapper {
+      width: 100%;
+    }
   }
 }

@@ -275,30 +275,21 @@
 @media (max-width: rem(1060)) {
   .menu {
     &-user {
-      position: absolute;
-      @include center("h");
-      width: rem(321);
 
       &__wrapper {
         position: relative;
-        margin: rem(20) 0;
+        margin: rem(20) auto;
         right: 0;
         top: 0;
-        height: rem(90);
+        left: 0;
+        height: rem(45);
+        width: rem(275);
+      }
+
+      &__link {
+        font-size: 0;
+        width: rem(45);
       }
     }
   }
 }
-
-/*
-@media (max-width: rem(630)) {
-  .menu-user__wrapper {
-    width: 100%;
-    justify-content: flex-end;
-
-    .menu-user {
-      width: rem(220);
-    }
-  }
-}
-*/

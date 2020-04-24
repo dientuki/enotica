@@ -27,7 +27,7 @@
           $percent_discount=$price_diference*100/$regular_price;
           ?>
           <li class="product-wrapper type-product status-publish first instock product_cat-hotsale has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-              <div classs="product">
+              <div class="product">
                 <span class="discount">- <?php echo floor($percent_discount);?> %</span>
                 <a href="<?php the_permalink(); ?>" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
                   <?php 

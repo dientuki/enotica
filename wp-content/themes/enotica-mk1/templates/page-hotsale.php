@@ -9,7 +9,7 @@ Template Post Type: page
 
 <?php the_post(); ?>
 
-<main>
+<main class="wrapper">
   <div class="title-section">
     <?php the_title(); ?>
   </div>    
@@ -65,4 +65,5 @@ Template Post Type: page
     </div>
   </div>
 </main>
+
 <?php get_footer();

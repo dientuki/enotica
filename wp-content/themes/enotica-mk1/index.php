@@ -1,7 +1,7 @@
 		<?php get_header(); ?>
     <?php the_post() ?>
     
-    <main>
+    <main class="wrapper">
       <div class="title-section">
         <?php the_title(); ?>
       </div>    

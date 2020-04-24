@@ -26,9 +26,9 @@
           $price_diference=$regular_price-$price;
           $percent_discount=$price_diference*100/$regular_price;
           ?>
-          <li class="product type-product status-publish first instock product_cat-hotsale has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-            
-              <span class="discount">- <?php echo floor($percent_discount);?> %</span>
+          <li class="product-wrapper type-product status-publish first instock product_cat-hotsale has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
+              <div class="product">
+                <span class="discount">- <?php echo floor($percent_discount);?> %</span>
                 <a href="<?php the_permalink(); ?>" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
                   <?php 
                   /*
@@ -46,9 +46,9 @@
                   <div class="icon-cart-button"></div>
                   <div class="text-button">Comprar</div>
                 </a>
-              <h2 class="woocommerce-loop-product__title"><?php the_title(); ?></h2> 
-              <span class="price"><del><span class="woocommerce-Price-amount amount"><?php echo wc_price( $regular_price ); ?> </span></del> <ins><span class="woocommerce-Price-amount amount"><?php echo wc_price( $price ); ?></span></ins></span>
-              
+                <h2 class="woocommerce-loop-product__title"><?php the_title(); ?></h2> 
+                <span class="price"><del><span class="woocommerce-Price-amount amount"><?php echo wc_price( $regular_price ); ?> </span></del> <ins><span class="woocommerce-Price-amount amount"><?php echo wc_price( $price ); ?></span></ins></span>
+              </div>              
             
           </li>
           <!-- Fin Template--> 

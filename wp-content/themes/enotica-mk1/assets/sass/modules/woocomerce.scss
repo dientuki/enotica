@@ -36,13 +36,12 @@ main .woocommerce {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  max-width: rem(1248);
 
   .product {
     width: rem(250);
     height: rem(336);
     padding-bottom: 32%; /* Same as width, sets height */
-    margin-bottom: 2%; /* (100-32*3)/2 */
+    margin-bottom: rem(16); /* (100-32*3)/2 */
     position: relative;
 
     .button {
@@ -316,7 +315,7 @@ main .woocommerce {
   }
 }
 
-input[type = text],
+input[type = "text"],
 .input-text {
   color: #666;
   border: rem(1) solid #bbb;

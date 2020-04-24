@@ -44,7 +44,7 @@
     border: none;
   }
 
-  [type = submit] {
+  [type = "submit"] {
     position: absolute;
     @include box(45);
     background: map-get($colors, "maroon");
@@ -92,5 +92,19 @@
 
   .wpcf7 {
     padding: rem(68) 0 rem(54) 0;
+  }
+}
+
+@media (max-width: rem(768)) {
+  .page-tasting {
+    &__title {
+      font-size: rem(32);
+    }
+
+    &__content {
+      font-size: rem(20);
+      margin-top: rem(24);
+      line-height: rem(21);
+    }
   }
 }

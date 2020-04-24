@@ -26,7 +26,7 @@
     border-radius: rem(40);
   }
 
-  [type = submit] {
+  [type = "submit"] {
     @include box(63);
     display: inline-block;
     border: none;
@@ -90,6 +90,20 @@
       left: 0;
       @include center("v");
       @include box(16);
+    }
+  }
+}
+
+@media (max-width: rem(900)) {
+  .form {
+    &-grid-2 {
+      margin-top: 0;
+      flex-wrap: wrap;
+
+      .form-item {
+        width: 100%;
+        margin-top: rem(33);
+      }
     }
   }
 }

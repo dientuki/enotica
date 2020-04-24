@@ -26,6 +26,8 @@
         mainDomain: "<?php echo get_template_directory_uri(); ?>"
       };
     </script>
+    <script src="<?php echo load_resource('appJs.js'); ?>" defer />
+
 		<?php wp_footer(); ?>
 		
 	</body>

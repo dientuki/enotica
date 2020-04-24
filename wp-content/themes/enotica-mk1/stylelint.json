@@ -78,7 +78,7 @@
     "selector-attribute-brackets-space-inside": "never",
     "selector-attribute-operator-space-after": "always",
     "selector-attribute-operator-space-before": "always",
-    "selector-attribute-quotes": "never",
+    "selector-attribute-quotes": "always",
     "selector-combinator-space-after": "always",
     "selector-combinator-space-before": "always",
     "selector-descendant-combinator-no-non-space": true,

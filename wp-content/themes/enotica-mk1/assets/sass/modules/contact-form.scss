@@ -26,7 +26,7 @@
     border-radius: rem(40);
   }
 
-  [type = submit] {
+  [type = "submit"] {
     @include box(63);
     display: inline-block;
     border: none;

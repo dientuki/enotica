@@ -44,7 +44,7 @@
     border: none;
   }
 
-  [type = submit] {
+  [type = "submit"] {
     position: absolute;
     @include box(45);
     background: map-get($colors, "maroon");

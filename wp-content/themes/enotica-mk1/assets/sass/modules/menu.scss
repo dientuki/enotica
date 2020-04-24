@@ -287,20 +287,20 @@
       height: rem(65);
     }
 
-    a[href="#"] {
+    a[href = "#"] {
       position: relative;
       height: rem(65);
 
       &:before {
         border-style: solid;
-        border-width: 0.25em 0.25em 0 0;
-        content: '';
-        height: 0.45em;
+        border-width: rem(4) rem(4) 0 0;
+        content: "";
+        height: rem(7);
         right: 1em;
         position: absolute;
         top: rem(23);
-        width: 0.45em;
-        transform: rotate(45deg);        
+        width: rem(7);
+        transform: rotate(45deg);
       }
     }
 
@@ -321,7 +321,7 @@
         display: block;
       }
 
-      a[href="#"] {
+      a[href = "#"] {
         &:before {
           transform: rotate(135deg);
         }
@@ -330,12 +330,9 @@
   }
 }
 
-
-
 @media (max-width: rem(1060)) {
   .menu {
     &-user {
-
       &__wrapper {
         position: relative;
         margin: rem(20) auto;

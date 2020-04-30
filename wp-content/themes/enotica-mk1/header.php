@@ -10,9 +10,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
 
     <?php wp_head(); ?>
-    
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!--
     <link rel="preload" href="<?php echo load_resource('AvenirNextLTPro-Regular.woff2'); ?>" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="<?php echo load_resource('AvenirNextLTPro-Bold.woff2'); ?>" as="font" type="font/woff2" crossorigin />
+    -->
     <link rel="stylesheet" type="text/css" href="<?php echo load_resource('appCss.css'); ?>" />
 
 	</head>

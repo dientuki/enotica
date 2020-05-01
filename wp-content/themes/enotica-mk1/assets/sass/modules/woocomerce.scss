@@ -16,7 +16,7 @@ main .woocommerce {
   color: #52646D;
   text-transform: uppercase;
   height: rem(32);
-  @include clamp(2)
+  @include clamp(2);
 }
 
 .woocommerce-LoopProduct-link {

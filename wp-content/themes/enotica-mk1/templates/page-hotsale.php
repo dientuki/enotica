@@ -10,6 +10,7 @@ Template Post Type: page
 <?php the_post(); ?>
 
 <main class="wrapper">
+  <img src="/wp-content/themes/enotica-mk1/assets/images/menu-hot-sale.jpg" width="100%">
   <div class="title-section">
     <?php the_title(); ?>
   </div>    

@@ -8,9 +8,9 @@ Template Post Type: page
 <?php get_header(); ?>
 
 <?php the_post(); ?>
-
+<img src="/wp-content/themes/enotica-mk1/assets/images/menu-hot-sale.jpg" width="100%">
 <main class="wrapper">
-  <img src="/wp-content/themes/enotica-mk1/assets/images/menu-hot-sale.jpg" width="100%">
+  
   <div class="title-section">
     <?php the_title(); ?>
   </div>    

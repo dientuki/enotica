@@ -10,12 +10,13 @@ main .woocommerce {
 }
 
 .woocommerce-loop-product__title {
-  display: flex;
-  justify-content: center;
+  text-align: center;
   font-size: rem(16) !important;
   padding-top: rem(5);
   color: #52646D;
   text-transform: uppercase;
+  height: rem(32);
+  @include clamp(2)
 }
 
 .woocommerce-LoopProduct-link {
@@ -38,8 +39,10 @@ main .woocommerce {
   justify-content: space-evenly;
 
   .product {
-    width: rem(250);
+    width: rem(240);
     height: rem(336);
+    padding-left: rem(5);
+    padding-right: rem(5);
     padding-bottom: 32%; /* Same as width, sets height */
     margin-bottom: rem(16); /* (100-32*3)/2 */
     position: relative;
